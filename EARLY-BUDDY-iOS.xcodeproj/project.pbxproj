@@ -78,6 +78,7 @@
 		C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3223BE352300F953FB /* NickNameViewController.swift */; };
 		C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */; };
 		C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */; };
+		C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		C591EB3223BE352300F953FB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
 		C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePopUpViewController.swift; sourceTree = "<group>"; };
+		C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +414,7 @@
 				C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */,
 				C591EB2723BE0FB900F953FB /* LoginViewController.swift */,
 				C591EB3223BE352300F953FB /* NickNameViewController.swift */,
+				C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */,
 				C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */,
 				C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */,
 			);
@@ -576,6 +579,7 @@
 				524BB60223B5209D00B82946 /* SearchScheduleViewController.swift in Sources */,
 				C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */,
 				52608B7F23B7B1300086AC3E /* PathCell.swift in Sources */,
+				C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */,
 				52041B0C23BA7ABB00A6E6AB /* SortingPopUpViewController.swift in Sources */,
 				52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */,
 				52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */,

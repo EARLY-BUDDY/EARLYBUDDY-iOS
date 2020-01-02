@@ -8,12 +8,12 @@
 
 import UIKit
 
-class FavoriteLocationViewController: UIViewController {
-    var passData: (() -> String)?
+class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
     
+    weak var delegate: SearchFavoriteViewController!
     let fontRegular = "NotoSansKR-Regular"
     let fontMedium = "NotoSansKR-Medium"
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var firstLocationButton: UIButton!
@@ -27,34 +27,68 @@ class FavoriteLocationViewController: UIViewController {
     @IBOutlet weak var firstContainerView: RoundedCornerView!
     @IBOutlet weak var secondContainerView: RoundedCornerView!
     @IBOutlet weak var thirdContainerView: RoundedCornerView!
-
-//    let homeName = "icHomeSelectedBig"
-//    let etcName = "icEtcSelectedBig"
-//    let companyName = "icCompanySelectedBig"
-//    let schoolName = "icSchoolSelectedBig"
+    
+    
+    var firstText: String = "장소를 등록해 주세요."
+    var secondText: String = "장소를 등록해 주세요."
+    var thirdText: String = "장소를 등록해 주세요."
+    //    let homeName = "icHomeSelectedBig"
+    //    let etcName = "icEtcSelectedBig"
+    //    let companyName = "icCompanySelectedBig"
+    //    let schoolName = "icSchoolSelectedBig"
     
     @IBOutlet weak var registerButton: UIButton!
+    var subView: UIView = UIView()
     
     var buttonNames: [String] = ["btnLocationPlus", "btnLocationPlus", "btnLocationPlus"]
+    var localLabels: [String] = []
     var buttons: [UIButton] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let searchFavoriteViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchFavoriteViewController") as! SearchFavoriteViewController
+        searchFavoriteViewController.delegate = self
+        let defaults = UserDefaults.standard
+        defaults.set(buttonNames, forKey: "favoriteIconNames")
         setInit()
-        
         setLabel(firstLocationLabel)
+        setLabel(secondLocationLabel)
+        setLabel(thirdLocationLabel)
         buttons = [firstLocationButton, secondLocationButton, thirdLocationButton]
-        print("buttons : ", buttons)
+    }
+    func textData(withParameter param: String) {
+        print("param  : ", param)
+        localLabels = [param, secondText, thirdText]
+        firstLocationLabel.text = localLabels[0]
+        secondLocationLabel.text = localLabels[1]
+        thirdLocationLabel.text = localLabels[2]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("232323232")
+        if segue.identifier == "show" {
+            print("asdfsdfasdfasdfsa")
+            let viewController : SearchFavoriteViewController = segue.destination as! SearchFavoriteViewController
+            viewController.delegate = self
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let defaults = UserDefaults.standard
-        defaults.set(buttonNames, forKey: "favoriteIconNames")
-        print("buttons : ", buttons)
-        for index in 1 ... buttons.count {
-            print("buttons : ", buttons)
-            buttons[index].setImage(UIImage(named: buttonNames[index]), for: .normal)
+        if self.view.subviews.contains(subView) {
+            subView.removeFromSuperview()
         }
         
+        localLabels = [firstText, secondText, thirdText]
+        firstLocationLabel.text = localLabels[0]
+        secondLocationLabel.text = localLabels[1]
+        thirdLocationLabel.text = localLabels[2]
+        
+        let defaults = UserDefaults.standard
+        let names = defaults.stringArray(forKey: "favoriteIconNames") ?? [String]()
+        for index in 0 ... buttons.count - 1 {
+            buttons[index].setImage(UIImage(named: names[index]), for: .normal)
+        }
     }
     
     func setInit(){
@@ -75,25 +109,30 @@ class FavoriteLocationViewController: UIViewController {
     }
     
     @IBAction func addLocationButton(_ sender: UIButton) {
-        let sub = UIView(frame: self.view.frame)
-        sub.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
-        self.view.addSubview(sub)
-
-        let myAlert = self.storyboard?.instantiateViewController(withIdentifier: "FavoritePopUpViewController") as! FavoritePopUpViewController
+        var selected: Int?
+        subView = UIView(frame: self.view.frame)
+        subView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        self.view.addSubview(subView)
         
-        for index in 0 ... buttons.count {
-            print("count@#~@#$!@#$@ : ", index)
+        let favPop = self.storyboard?.instantiateViewController(withIdentifier: "FavoritePopUpViewController") as! FavoritePopUpViewController
+        
+        for index in 0 ... buttons.count - 1 {
             if sender == buttons[index] {
-                myAlert.selectIdx = index
+                selected = index
+                myAlert.selectIdx = selected!
             }
         }
         
-        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        myAlert.onFinished = { [weak self] in
-//            self?.goLoginView()
+        favPop.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        favPop.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        favPop.onFinished = { [weak self] in
+            let locationVC = self?.storyboard?.instantiateViewController(withIdentifier: "SearchFavoriteViewController") as! SearchFavoriteViewController
+            locationVC.selectedIdx = selected
+            self?.navigationController?.pushViewController(locationVC, animated: true)
         }
-        self.present(myAlert, animated: true, completion: nil)
+        self.present(favPop, animated: true, completion: nil)
     }
     
+    
 }
+

@@ -70,10 +70,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func goSignUpAction(_ sender: Any) {
-        guard let signUpVC = self.storyboard!.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else {
+        
+        guard let signUpVC = self.storyboard!.instantiateViewController(withIdentifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else {
             return }
         signUpVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(signUpVC, animated: true)
+        
+//        guard let signUpVC = self.storyboard!.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else {
+//            return }
+//        signUpVC.modalPresentationStyle = .fullScreen
+//        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     @IBAction func autoLoginButton(_ sender: CheckBoxButton) {
