@@ -9,6 +9,8 @@
 import UIKit
 
 class SignUpCompleteViewController: UIViewController {
+    var onFinished: (() -> Void)?
+    
     let fontMedium = "NotoSansKR-Medium"
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -29,10 +31,7 @@ class SignUpCompleteViewController: UIViewController {
     }
     
     @IBAction func goLoginAction(_ sender: Any) {
-        if let avc = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            self.present(avc, animated: true, completion: nil)
-            self.dismiss(animated: true, completion: nil)
-        }
-        
+        self.dismiss(animated: true)
+        onFinished?()
     }
 }

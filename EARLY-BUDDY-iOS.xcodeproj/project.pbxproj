@@ -71,6 +71,10 @@
 		C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2A23BE102100F953FB /* RoundBorderView.swift */; };
 		C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2C23BE106B00F953FB /* String+Extension.swift */; };
 		C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */; };
+		C591EB3123BE2ABC00F953FB /* checkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3023BE2ABC00F953FB /* checkButton.swift */; };
+		C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3223BE352300F953FB /* NickNameViewController.swift */; };
+		C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */; };
+		C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +146,10 @@
 		C591EB2A23BE102100F953FB /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
 		C591EB2C23BE106B00F953FB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		C591EB3023BE2ABC00F953FB /* checkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkButton.swift; sourceTree = "<group>"; };
+		C591EB3223BE352300F953FB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
+		C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
+		C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +386,9 @@
 				C591EB2323BE0F9500F953FB /* SignUpViewController.swift */,
 				C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */,
 				C591EB2723BE0FB900F953FB /* LoginViewController.swift */,
+				C591EB3223BE352300F953FB /* NickNameViewController.swift */,
+				C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */,
+				C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -386,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				C591EB2A23BE102100F953FB /* RoundBorderView.swift */,
+				C591EB3023BE2ABC00F953FB /* checkButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -537,6 +549,7 @@
 				52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */,
 				524BB60023B3D4A700B82946 /* BeforeViewController.swift in Sources */,
 				524BB60223B5209D00B82946 /* SearchScheduleViewController.swift in Sources */,
+				C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */,
 				52608B7F23B7B1300086AC3E /* PathCell.swift in Sources */,
 				52041B0C23BA7ABB00A6E6AB /* SortingPopUpViewController.swift in Sources */,
 				52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */,
@@ -545,9 +558,11 @@
 				524EC24F23B5E94F00A3CF0C /* UIView+Extension.swift in Sources */,
 				524BB5F123B331A900B82946 /* UIButton+Extension.swift in Sources */,
 				52608B8823B9116D0086AC3E /* DetailPath.swift in Sources */,
+				C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */,
 				524EC25123B5F3C700A3CF0C /* PopUpViewController.swift in Sources */,
 				52608B8A23B912C10086AC3E /* DetailPathCell.swift in Sources */,
 				52608B8623B901DF0086AC3E /* ShowPathDetailViewController.swift in Sources */,
+				C591EB3123BE2ABC00F953FB /* checkButton.swift in Sources */,
 				52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */,
 				C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */,
 				52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */,
@@ -559,6 +574,7 @@
 				52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */,
 				C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */,
 				52EAC2D623BD06E800529CFE /* NetworkResult.swift in Sources */,
+				C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */,
 				52608B8423B807E20086AC3E /* CircleCell.swift in Sources */,
 				52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */,
 				52608B8E23B93A9F0086AC3E /* WalkCell.swift in Sources */,

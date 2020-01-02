@@ -11,6 +11,7 @@ import UIKit
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     let fontRegular = "NotoSansKR-Regular"
     let fontMedium = "NotoSansKR-Medium"
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var idContainerView: RoundedCornerView!
     @IBOutlet weak var passwdContainerView: RoundedCornerView!
@@ -65,9 +66,21 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let sub = UIView(frame: self.view.frame)
         sub.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
         self.view.addSubview(sub)
-        let avc = (self.storyboard!.instantiateViewController(withIdentifier: "SignUpCompleteViewController")  as? SignUpCompleteViewController)!
-        avc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        self.present(avc, animated: true, completion: nil)
+
+        let myAlert = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCompleteViewController") as! SignUpCompleteViewController
+        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        myAlert.onFinished = { [weak self] in
+            self?.goLoginView()
+        }
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    func goLoginView(){
+        guard let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            return }
+        loginVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -150,6 +163,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    
+    
     func setUpView(_ view: UIView){
         view.backgroundColor = .white
     }
