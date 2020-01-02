@@ -13,7 +13,7 @@ protocol SearchFavoriteDelegate {
 }
 
 class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
-    var delegate: SearchFavoriteDelegate!
+    var delegate: SearchFavoriteDelegate?
     
     @IBOutlet weak var searchContainerView: UIView!
     @IBOutlet var startArriveLabel: UILabel!

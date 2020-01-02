@@ -38,6 +38,7 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
     //    let schoolName = "icSchoolSelectedBig"
     
     @IBOutlet weak var registerButton: UIButton!
+     
     var subView: UIView = UIView()
     
     var buttonNames: [String] = ["btnLocationPlus", "btnLocationPlus", "btnLocationPlus"]
@@ -89,7 +90,46 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
         for index in 0 ... buttons.count - 1 {
             buttons[index].setImage(UIImage(named: names[index]), for: .normal)
         }
+        for text in localLabels {
+            if firstLocationLabel.text != "장소를 등록해 주세요." {
+                firstContainerView.setColor(.mainblue)
+            } else {
+                firstContainerView.setColor(.lightGray)
+            }
+            if secondLocationLabel.text != "장소를 등록해 주세요." {
+                secondContainerView.setColor(.mainblue)
+            } else {
+                secondContainerView.setColor(.lightGray)
+            }
+            if thirdLocationLabel.text != "장소를 등록해 주세요." {
+                thirdContainerView.setColor(.mainblue)
+            } else {
+                thirdContainerView.setColor(.lightGray)
+            }
+        }
+        print("names  : ", names)
+        registerButton.isEnabled = true
+        registerButton.backgroundColor = .mainblue
+        for name in names {
+            if name == "btnLocationPlus" {
+                registerButton.isEnabled = false
+                registerButton.backgroundColor = .lightGray
+            }
+        }
     }
+    
+    @IBAction func registerAction(_ sender: Any) {
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginEndViewController") as! LoginEndViewController
+        loginVC.isSkip = false
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
+    @IBAction func skipAction(_ sender: Any) {
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginEndViewController") as! LoginEndViewController
+        loginVC.isSkip = true
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
     
     func setInit(){
         let imageView : UIImageView = UIImageView(image: UIImage(named: "backLocation.png")!)
@@ -119,7 +159,7 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
         for index in 0 ... buttons.count - 1 {
             if sender == buttons[index] {
                 selected = index
-                myAlert.selectIdx = selected!
+                favPop.selectIdx = selected!
             }
         }
         

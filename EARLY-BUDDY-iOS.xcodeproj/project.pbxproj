@@ -79,6 +79,7 @@
 		C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */; };
 		C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */; };
 		C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */; };
+		C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,7 @@
 		C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
 		C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePopUpViewController.swift; sourceTree = "<group>"; };
 		C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteViewController.swift; sourceTree = "<group>"; };
+		C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +419,7 @@
 				C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */,
 				C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */,
 				C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */,
+				C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */,
 				52AD2F3923BE2EE700706B0B /* SearchAddressViewController.swift in Sources */,
 				52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */,
+				C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */,
 				C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */,
 				52EAC2D623BD06E800529CFE /* NetworkResult.swift in Sources */,
 				C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */,

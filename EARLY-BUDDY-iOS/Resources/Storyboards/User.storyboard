@@ -420,6 +420,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerAction:" destination="srF-FE-OjP" eventType="touchUpInside" id="Qkt-1t-cGK"/>
+                                    <action selector="registerAction:" destination="BeF-bT-zXw" eventType="touchUpInside" id="v6d-23-6p1"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-UD-zez" customClass="RoundedCornerView" customModule="EARLY_BUDDY_iOS" customModuleProvider="target">
@@ -504,6 +505,9 @@
                                 <state key="normal" title="건너뛰기">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="skipAction:" destination="BeF-bT-zXw" eventType="touchUpInside" id="aha-Bb-Rsj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1201,6 +1205,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCP-Co-UdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="-76.108374384236456"/>
+        </scene>
+        <!--Login End View Controller-->
+        <scene sceneID="kSW-sG-Djw">
+            <objects>
+                <viewController storyboardIdentifier="LoginEndViewController" id="GjH-cb-iCm" customClass="LoginEndViewController" customModule="EARLY_BUDDY_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VEr-8A-a92">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자주 가는 장소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fX-h2-ZDi">
+                                <rect key="frame" x="37" y="541" width="305" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="CwV-xp-3XZ"/>
+                                    <constraint firstAttribute="width" constant="305" id="cvd-Em-3uO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="18"/>
+                                <color key="textColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-DL-6ws">
+                                <rect key="frame" x="55" y="657" width="291" height="49"/>
+                                <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="8rc-Lp-7cm"/>
+                                    <constraint firstAttribute="height" constant="49" id="bV7-ny-2vF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="17"/>
+                                <state key="normal" title="시작하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="GjH-cb-iCm" eventType="touchUpInside" id="AEo-tV-Hp7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7fX-h2-ZDi" firstAttribute="leading" secondItem="zj6-4D-VSg" secondAttribute="leading" constant="37" id="2TQ-E5-29G"/>
+                            <constraint firstItem="zj6-4D-VSg" firstAttribute="trailing" secondItem="aPg-DL-6ws" secondAttribute="trailing" constant="29" id="Pc7-cr-VfO"/>
+                            <constraint firstItem="zj6-4D-VSg" firstAttribute="bottom" secondItem="aPg-DL-6ws" secondAttribute="bottom" constant="72" id="R5V-rO-fIY"/>
+                            <constraint firstItem="aPg-DL-6ws" firstAttribute="top" secondItem="7fX-h2-ZDi" secondAttribute="bottom" constant="47" id="Rgx-rl-eIl"/>
+                            <constraint firstItem="zj6-4D-VSg" firstAttribute="trailing" secondItem="7fX-h2-ZDi" secondAttribute="trailing" constant="33" id="Zpz-AI-ZjA"/>
+                            <constraint firstItem="aPg-DL-6ws" firstAttribute="leading" secondItem="zj6-4D-VSg" secondAttribute="leading" constant="55" id="lpT-h0-Pc3"/>
+                            <constraint firstItem="7fX-h2-ZDi" firstAttribute="top" secondItem="zj6-4D-VSg" secondAttribute="top" constant="497" id="zsh-yp-vbn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zj6-4D-VSg"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="aPg-DL-6ws" id="gMl-ON-Fua"/>
+                        <outlet property="titleLabel" destination="7fX-h2-ZDi" id="ckZ-2c-lqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CtM-np-2iX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2896.8000000000002" y="-76.108374384236456"/>
         </scene>
     </scenes>
     <resources>
