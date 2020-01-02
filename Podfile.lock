@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Hero (1.4.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Hero
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Hero
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 0d68960791d8ac3bd2e1118e4dcb4a9c49be4161
+
+COCOAPODS: 1.8.4
