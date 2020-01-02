@@ -15,7 +15,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="1BP-XT-Gbp">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F0o-uX-Him" customClass="SignUpViewController" customModule="EARLY_BUDDY_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F0o-uX-Him" customClass="SignUpViewController" customModule="EARLY_BUDDY_iOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="stb-5x-j99">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +253,7 @@
         <!--Login View Controller-->
         <scene sceneID="X3L-xM-2xf">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r24-um-6oP" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r24-um-6oP" customClass="LoginViewController" customModule="EARLY_BUDDY_iOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z04-Fc-bAn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

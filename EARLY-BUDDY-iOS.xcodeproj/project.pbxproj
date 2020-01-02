@@ -63,6 +63,14 @@
 		52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2D723BD079100529CFE /* APIConstants.swift */; };
 		52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DA23BD088900529CFE /* SearchPathResponse.swift */; };
 		52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */; };
+		C591EB1C23BE0E0400F953FB /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1A23BE0E0400F953FB /* Calendar.storyboard */; };
+		C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1B23BE0E0400F953FB /* User.storyboard */; };
+		C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2323BE0F9500F953FB /* SignUpViewController.swift */; };
+		C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */; };
+		C591EB2823BE0FB900F953FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2723BE0FB900F953FB /* LoginViewController.swift */; };
+		C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2A23BE102100F953FB /* RoundBorderView.swift */; };
+		C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2C23BE106B00F953FB /* String+Extension.swift */; };
+		C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +134,14 @@
 		63934CFA3C66175262122920 /* Pods-EARLY-BUDDY-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.debug.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EARLY_BUDDY_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.release.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C591EB1A23BE0E0400F953FB /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		C591EB1B23BE0E0400F953FB /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		C591EB2323BE0F9500F953FB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
+		C591EB2723BE0FB900F953FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C591EB2A23BE102100F953FB /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
+		C591EB2C23BE106B00F953FB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +237,7 @@
 		52CCE39923AFB60A00964D05 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB2923BE101600F953FB /* View */,
 				52608B7B23B7A56E0086AC3E /* Cells */,
 				52CCE39F23AFB6EA00964D05 /* Extensions */,
 				52CCE39E23AFB6E600964D05 /* Networking */,
@@ -243,6 +260,7 @@
 		52CCE39B23AFB62200964D05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB2223BE0F8000F953FB /* User */,
 				524BB5F223B3771400B82946 /* Schedule */,
 				52CCE3A823B2143F00964D05 /* Main */,
 			);
@@ -252,6 +270,8 @@
 		52CCE39C23AFB63400964D05 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB1A23BE0E0400F953FB /* Calendar.storyboard */,
+				C591EB1B23BE0E0400F953FB /* User.storyboard */,
 				52CCE39023AFB5F900964D05 /* LaunchScreen.storyboard */,
 				52CCE38B23AFB5F600964D05 /* Main.storyboard */,
 				524BB5F323B3772B00B82946 /* Schedule.storyboard */,
@@ -286,6 +306,8 @@
 				524BB5FB23B3BDA600B82946 /* Kerning.swift */,
 				524EC24E23B5E94F00A3CF0C /* UIView+Extension.swift */,
 				524EC25223B6068D00A3CF0C /* Shadow.swift */,
+				C591EB2C23BE106B00F953FB /* String+Extension.swift */,
+				C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +372,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C591EB2223BE0F8000F953FB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB2323BE0F9500F953FB /* SignUpViewController.swift */,
+				C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */,
+				C591EB2723BE0FB900F953FB /* LoginViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C591EB2923BE101600F953FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB2A23BE102100F953FB /* RoundBorderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,10 +450,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C591EB1C23BE0E0400F953FB /* Calendar.storyboard in Resources */,
 				52CCE3B023B2229300964D05 /* NotoSansKR-Medium.otf in Resources */,
 				52CCE3B323B2229300964D05 /* NotoSansKR-Thin.otf in Resources */,
 				52CCE3C923B222B600964D05 /* Roboto-Thin.ttf in Resources */,
 				52CCE3C723B222B600964D05 /* Roboto-Black.ttf in Resources */,
+				C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */,
 				52CCE3CD23B222B600964D05 /* Roboto-Italic.ttf in Resources */,
 				524BB5F423B3772B00B82946 /* Schedule.storyboard in Resources */,
 				52CCE3C223B222B600964D05 /* Roboto-LightItalic.ttf in Resources */,
@@ -484,10 +526,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C591EB2823BE0FB900F953FB /* LoginViewController.swift in Sources */,
 				52608B8C23B91E5C0086AC3E /* ClickCell.swift in Sources */,
+				C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */,
 				524BB5F823B3B1F500B82946 /* NowViewController.swift in Sources */,
 				52041B0A23BA7AB000A6E6AB /* PreferPopUpViewController.swift in Sources */,
 				524BB5F623B377E600B82946 /* MainScheduleViewController.swift in Sources */,
+				C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */,
 				52608B7D23B7A6CE0086AC3E /* LineCell.swift in Sources */,
 				52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */,
 				524BB60023B3D4A700B82946 /* BeforeViewController.swift in Sources */,
@@ -504,12 +549,15 @@
 				52608B8A23B912C10086AC3E /* DetailPathCell.swift in Sources */,
 				52608B8623B901DF0086AC3E /* ShowPathDetailViewController.swift in Sources */,
 				52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */,
+				C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */,
 				52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */,
 				52EAC2D223BC830000529CFE /* NoScheduleViewController.swift in Sources */,
+				C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */,
 				524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */,
 				524BB5EF23B3318800B82946 /* UIColor+Extension.swift in Sources */,
 				52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */,
 				52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */,
+				C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */,
 				52EAC2D623BD06E800529CFE /* NetworkResult.swift in Sources */,
 				52608B8423B807E20086AC3E /* CircleCell.swift in Sources */,
 				52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */,
