@@ -29,10 +29,13 @@
 		52608B8423B807E20086AC3E /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8323B807E20086AC3E /* CircleCell.swift */; };
 		52608B8623B901DF0086AC3E /* ShowPathDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8523B901DF0086AC3E /* ShowPathDetailViewController.swift */; };
 		52608B8823B9116D0086AC3E /* DetailPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8723B9116D0086AC3E /* DetailPath.swift */; };
-		52608B8A23B912C10086AC3E /* DetailPathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8923B912C10086AC3E /* DetailPathCell.swift */; };
 		52608B8C23B91E5C0086AC3E /* ClickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8B23B91E5C0086AC3E /* ClickCell.swift */; };
 		52608B8E23B93A9F0086AC3E /* WalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8D23B93A9F0086AC3E /* WalkCell.swift */; };
 		52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B8F23B93AFD0086AC3E /* ArriveCell.swift */; };
+		52AD2F3423BE226D00706B0B /* SearchAddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3323BE226D00706B0B /* SearchAddressService.swift */; };
+		52AD2F3723BE228B00706B0B /* SearchAddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3623BE228B00706B0B /* SearchAddressResponse.swift */; };
+		52AD2F3923BE2EE700706B0B /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */; };
+		52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3E23BE351300706B0B /* AddressCell.swift */; };
 		52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2F12723B22F5500C2BD75 /* NoneViewController.swift */; };
 		52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38523AFB5F600964D05 /* AppDelegate.swift */; };
 		52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38723AFB5F600964D05 /* SceneDelegate.swift */; };
@@ -99,10 +102,13 @@
 		52608B8323B807E20086AC3E /* CircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
 		52608B8523B901DF0086AC3E /* ShowPathDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPathDetailViewController.swift; sourceTree = "<group>"; };
 		52608B8723B9116D0086AC3E /* DetailPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPath.swift; sourceTree = "<group>"; };
-		52608B8923B912C10086AC3E /* DetailPathCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPathCell.swift; sourceTree = "<group>"; };
 		52608B8B23B91E5C0086AC3E /* ClickCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCell.swift; sourceTree = "<group>"; };
 		52608B8D23B93A9F0086AC3E /* WalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkCell.swift; sourceTree = "<group>"; };
 		52608B8F23B93AFD0086AC3E /* ArriveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveCell.swift; sourceTree = "<group>"; };
+		52AD2F3323BE226D00706B0B /* SearchAddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressService.swift; sourceTree = "<group>"; };
+		52AD2F3623BE228B00706B0B /* SearchAddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressResponse.swift; sourceTree = "<group>"; };
+		52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
+		52AD2F3E23BE351300706B0B /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		52C2F12723B22F5500C2BD75 /* NoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneViewController.swift; sourceTree = "<group>"; };
 		52CCE38223AFB5F600964D05 /* EARLY-BUDDY-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BUDDY-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CCE38523AFB5F600964D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +191,7 @@
 				52041B0B23BA7ABB00A6E6AB /* SortingPopUpViewController.swift */,
 				52EAC2D123BC830000529CFE /* NoScheduleViewController.swift */,
 				52EAC2D323BC856C00529CFE /* DetailScheduleViewController.swift */,
+				52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -195,10 +202,10 @@
 				52608B7C23B7A6CE0086AC3E /* LineCell.swift */,
 				52608B7E23B7B1300086AC3E /* PathCell.swift */,
 				52608B8323B807E20086AC3E /* CircleCell.swift */,
-				52608B8923B912C10086AC3E /* DetailPathCell.swift */,
 				52608B8B23B91E5C0086AC3E /* ClickCell.swift */,
 				52608B8D23B93A9F0086AC3E /* WalkCell.swift */,
 				52608B8F23B93AFD0086AC3E /* ArriveCell.swift */,
+				52AD2F3E23BE351300706B0B /* AddressCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -210,6 +217,22 @@
 				52608B8723B9116D0086AC3E /* DetailPath.swift */,
 			);
 			path = Path;
+			sourceTree = "<group>";
+		};
+		52AD2F3223BE226100706B0B /* SearchAddress */ = {
+			isa = PBXGroup;
+			children = (
+				52AD2F3323BE226D00706B0B /* SearchAddressService.swift */,
+			);
+			path = SearchAddress;
+			sourceTree = "<group>";
+		};
+		52AD2F3523BE227D00706B0B /* SearchAddress */ = {
+			isa = PBXGroup;
+			children = (
+				52AD2F3623BE228B00706B0B /* SearchAddressResponse.swift */,
+			);
+			path = SearchAddress;
 			sourceTree = "<group>";
 		};
 		52CCE37923AFB5F600964D05 = {
@@ -290,6 +313,7 @@
 		52CCE39D23AFB6DD00964D05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52AD2F3523BE227D00706B0B /* SearchAddress */,
 				52EAC2D923BD087D00529CFE /* SearchPath */,
 				52608B8023B7C5060086AC3E /* Path */,
 			);
@@ -299,6 +323,7 @@
 		52CCE39E23AFB6E600964D05 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				52AD2F3223BE226100706B0B /* SearchAddress */,
 				52EAC2DC23BD0D6F00529CFE /* SearchPath */,
 				52EAC2D523BD06E800529CFE /* NetworkResult.swift */,
 				52EAC2D723BD079100529CFE /* APIConstants.swift */,
@@ -552,7 +577,9 @@
 				C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */,
 				52608B7F23B7B1300086AC3E /* PathCell.swift in Sources */,
 				52041B0C23BA7ABB00A6E6AB /* SortingPopUpViewController.swift in Sources */,
+				52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */,
 				52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */,
+				52AD2F3723BE228B00706B0B /* SearchAddressResponse.swift in Sources */,
 				524BB5FE23B3CC0400B82946 /* GoingViewController.swift in Sources */,
 				52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */,
 				524EC24F23B5E94F00A3CF0C /* UIView+Extension.swift in Sources */,
@@ -560,7 +587,6 @@
 				52608B8823B9116D0086AC3E /* DetailPath.swift in Sources */,
 				C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */,
 				524EC25123B5F3C700A3CF0C /* PopUpViewController.swift in Sources */,
-				52608B8A23B912C10086AC3E /* DetailPathCell.swift in Sources */,
 				52608B8623B901DF0086AC3E /* ShowPathDetailViewController.swift in Sources */,
 				C591EB3123BE2ABC00F953FB /* checkButton.swift in Sources */,
 				52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */,
@@ -569,8 +595,10 @@
 				52EAC2D223BC830000529CFE /* NoScheduleViewController.swift in Sources */,
 				C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */,
 				524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */,
+				52AD2F3423BE226D00706B0B /* SearchAddressService.swift in Sources */,
 				524BB5EF23B3318800B82946 /* UIColor+Extension.swift in Sources */,
 				52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */,
+				52AD2F3923BE2EE700706B0B /* SearchAddressViewController.swift in Sources */,
 				52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */,
 				C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */,
 				52EAC2D623BD06E800529CFE /* NetworkResult.swift in Sources */,

@@ -424,7 +424,7 @@ class MainScheduleViewController: UIViewController {
     }
     
     @objc func goToSearchPath() {
-        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "ShowPathDetailViewController") as? ShowPathDetailViewController else { return }
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SearchScheduleViewController") as? SearchScheduleViewController else { return }
         nextVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -433,6 +433,7 @@ class MainScheduleViewController: UIViewController {
 }
 
 extension MainScheduleViewController: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == titleTextField {
             self.titleLineView.backgroundColor = UIColor.mainblue
@@ -445,6 +446,7 @@ extension MainScheduleViewController: UITextFieldDelegate {
             self.timeLineView.heightAnchor.constraint(equalToConstant: 2).isActive = true
         }
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == titleTextField {
             self.titleLineView.backgroundColor = UIColor.darkgray

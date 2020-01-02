@@ -21,6 +21,7 @@ class SelectPathViewController: UIViewController {
         var min: Int?
         var line: Int?
     }
+    
     enum Transport {
         case walk, subway, bus, none
     }
