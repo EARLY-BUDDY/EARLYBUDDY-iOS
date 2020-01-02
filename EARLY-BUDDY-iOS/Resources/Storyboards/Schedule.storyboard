@@ -2593,6 +2593,7 @@
                     <connections>
                         <outlet property="searchAddressTV" destination="O6X-2l-PgA" id="bAv-YN-h5l"/>
                         <outlet property="searchTextField" destination="DCR-Be-17E" id="uvU-Sv-aNq"/>
+                        <outlet property="searchView" destination="0wN-zU-AAO" id="ZFw-bf-9oV"/>
                         <outlet property="startArriveLabel" destination="LjA-QK-ZbM" id="cT9-l5-cxo"/>
                     </connections>
                 </viewController>
