@@ -9,17 +9,26 @@
 import UIKit
 
 class SearchAddressViewController: UIViewController {
-
+    
     @IBOutlet var startArriveLabel: UILabel!
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var searchAddressTV: UITableView!
     @IBOutlet var searchView: UIView!
+    @IBOutlet var firstImgButton: UIButton!
+    @IBOutlet var secondImgButton: UIButton!
+    @IBOutlet var thirdImgButton: UIButton!
+    @IBOutlet var firstLabel: UILabel!
+    @IBOutlet var secondLabel: UILabel!
+    @IBOutlet var thirdLabel: UILabel!
     
     let homeImage = UIImage(named: "icHomeSelectedSmall")
     let companyImage = UIImage(named: "icCompanySelectedSmall")
     let schoolImage = UIImage(named: "icSchoolSelectedSmall")
     let etcImage = UIImage(named: "icEtcSelectedSmall")
     let addImage = UIImage(named: "icLocationPlusSmall")
+    
+    var buttons: [UIButton] = []
+    var labels: [UILabel] = []
     
     var startArrive: String = ""
     var resultAddr: String = ""
@@ -30,6 +39,9 @@ class SearchAddressViewController: UIViewController {
         
         self.startArriveLabel.text = startArrive
         self.searchView.layer.cornerRadius = 19
+        
+        self.buttons = [firstImgButton, secondImgButton, thirdImgButton]
+        self.labels = [firstLabel, secondLabel, thirdLabel]
         
         searchTextField.delegate = self
         searchAddressTV.delegate = self
@@ -43,15 +55,34 @@ class SearchAddressViewController: UIViewController {
     }
     
     @IBAction func addFavorite(_ sender: UIButton) {
-        let img = sender.image(for: .normal)
-        if img == addImage {
-            guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else { return }
-            nextVC.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(nextVC, animated: true)
+        if sender == firstImgButton {
+            if firstLabel.text == "자주 가는 장소 등록" {
+                guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else { return }
+                nextVC.buttons = self.buttons
+                nextVC.labels = self.labels
+                nextVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        } else if sender == secondImgButton {
+            if secondLabel.text == "자주 가는 장소 등록" {
+                guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else { return }
+                nextVC.buttons = self.buttons
+                nextVC.labels = self.labels
+                nextVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        } else if sender == thirdImgButton {
+            if thirdLabel.text == "자주 가는 장소 등록" {
+                guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else { return }
+                nextVC.buttons = self.buttons
+                nextVC.labels = self.labels
+                nextVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
         }
     }
     
-
+    
     func customNavigationBar() {
         self.view.layer.backgroundColor = UIColor.white.cgColor
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -84,7 +115,7 @@ extension SearchAddressViewController: UITextFieldDelegate {
         }
         return true
     }
-}
+} 
 
 extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

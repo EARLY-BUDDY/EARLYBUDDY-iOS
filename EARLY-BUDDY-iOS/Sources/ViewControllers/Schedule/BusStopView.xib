@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusStopView" customModule="EARLY_BUDDY_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="dotView" destination="QhV-ww-toP" id="NPY-jd-aQA"/>
+                <outlet property="titleLabel" destination="t5c-ho-baj" id="dhb-oX-Fqz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6hz-nS-vPQ">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhV-ww-toP">
+                    <rect key="frame" x="0.0" y="3.5" width="11" height="11"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.77647058820000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QhV-ww-toP" secondAttribute="height" multiplier="1:1" id="KXY-JP-Iz0"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정류장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5c-ho-baj">
+                    <rect key="frame" x="26" y="0.0" width="74" height="18"/>
+                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="10"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="t5c-ho-baj" secondAttribute="bottom" id="2Oe-Ua-0zy"/>
+                <constraint firstAttribute="trailing" secondItem="t5c-ho-baj" secondAttribute="trailing" id="AMS-ng-dea"/>
+                <constraint firstItem="t5c-ho-baj" firstAttribute="leading" secondItem="6hz-nS-vPQ" secondAttribute="leading" constant="26" id="Aul-R2-TQt"/>
+                <constraint firstItem="QhV-ww-toP" firstAttribute="top" secondItem="6hz-nS-vPQ" secondAttribute="top" constant="3.5" id="Cub-vu-LVf"/>
+                <constraint firstItem="QhV-ww-toP" firstAttribute="leading" secondItem="6hz-nS-vPQ" secondAttribute="leading" id="LqD-u3-YI9"/>
+                <constraint firstItem="t5c-ho-baj" firstAttribute="top" secondItem="6hz-nS-vPQ" secondAttribute="top" id="Lsp-mN-Shc"/>
+                <constraint firstAttribute="bottom" secondItem="QhV-ww-toP" secondAttribute="bottom" constant="3.5" id="iVH-WW-d3j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="128" y="111"/>
+        </view>
+    </objects>
+</document>

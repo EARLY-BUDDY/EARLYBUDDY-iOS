@@ -36,10 +36,6 @@ class PopUpViewController: UIViewController {
         self.confirm = false
         self.dismiss(animated: true)
         onFinished?()
-        
-        //        guard let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoneViewController") as? NoneViewController else { return }
-        //        nextVC.modalPresentationStyle = .fullScreen
-        //        self.present(nextVC, animated: true, completion: nil)
     }
     
     // 일정 상세보기로 가는 함수 만들기

@@ -16,6 +16,8 @@ class NoneViewController: UIViewController {
     @IBOutlet var showViewButton: UIButton!
     @IBOutlet var showViewButton2: UIButton!
     @IBOutlet var showViewButton3: UIButton!
+    @IBOutlet var calendarButton: UIButton!
+    @IBOutlet var mypageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,18 @@ class NoneViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
+    }
+    
+    @IBAction func goToCalendar(_ sender: UIButton) {
+        guard let nextVC = UIStoryboard(name: "Calendar", bundle: nil).instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func goMypageAction(_ sender: UIButton) {
+        guard let nextVC = UIStoryboard(name: "Mypage", bundle: nil).instantiateViewController(identifier: "MypageViewController") as? MypageViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @objc func goToMine() {

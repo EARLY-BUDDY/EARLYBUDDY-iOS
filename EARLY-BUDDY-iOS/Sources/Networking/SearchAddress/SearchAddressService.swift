@@ -28,6 +28,7 @@ struct SearchAddressService {
             case .success:
                 if let value = response.result.value {
                     if let status = response.response?.statusCode {
+                        print(status)
                         switch status {
                         case 200:
                             do {
