@@ -10,6 +10,11 @@
 		4B3C2ED072E874F88C1FC44F /* Pods_EARLY_BUDDY_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */; };
 		52041B0A23BA7AB000A6E6AB /* PreferPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041B0923BA7AB000A6E6AB /* PreferPopUpViewController.swift */; };
 		52041B0C23BA7ABB00A6E6AB /* SortingPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041B0B23BA7ABB00A6E6AB /* SortingPopUpViewController.swift */; };
+		5204FCCC23BFD757006A2299 /* UserSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204FCCB23BFD757006A2299 /* UserSchedule.swift */; };
+		5204FCCE23BFD77A006A2299 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204FCCD23BFD77A006A2299 /* CalendarViewController.swift */; };
+		5204FCD023BFD87B006A2299 /* Calendar2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204FCCF23BFD87B006A2299 /* Calendar2ViewController.swift */; };
+		5204FCD223BFE0D8006A2299 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5204FCD123BFE0D8006A2299 /* Mypage.storyboard */; };
+		5204FCD523BFE0FF006A2299 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204FCD423BFE0FF006A2299 /* MypageViewController.swift */; };
 		524BB5EF23B3318800B82946 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BB5EE23B3318800B82946 /* UIColor+Extension.swift */; };
 		524BB5F123B331A900B82946 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BB5F023B331A900B82946 /* UIButton+Extension.swift */; };
 		524BB5F423B3772B00B82946 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524BB5F323B3772B00B82946 /* Schedule.storyboard */; };
@@ -96,6 +101,11 @@
 /* Begin PBXFileReference section */
 		52041B0923BA7AB000A6E6AB /* PreferPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferPopUpViewController.swift; sourceTree = "<group>"; };
 		52041B0B23BA7ABB00A6E6AB /* SortingPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingPopUpViewController.swift; sourceTree = "<group>"; };
+		5204FCCB23BFD757006A2299 /* UserSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSchedule.swift; sourceTree = "<group>"; };
+		5204FCCD23BFD77A006A2299 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		5204FCCF23BFD87B006A2299 /* Calendar2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar2ViewController.swift; sourceTree = "<group>"; };
+		5204FCD123BFE0D8006A2299 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		5204FCD423BFE0FF006A2299 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		524BB5EE23B3318800B82946 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		524BB5F023B331A900B82946 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		524BB5F323B3772B00B82946 /* Schedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
@@ -203,6 +213,24 @@
 				C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5204FCCA23BFD72C006A2299 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				5204FCCB23BFD757006A2299 /* UserSchedule.swift */,
+				5204FCCD23BFD77A006A2299 /* CalendarViewController.swift */,
+				5204FCCF23BFD87B006A2299 /* Calendar2ViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		5204FCD323BFE0F3006A2299 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				5204FCD423BFE0FF006A2299 /* MypageViewController.swift */,
+			);
+			path = Mypage;
 			sourceTree = "<group>";
 		};
 		524BB5F223B3771400B82946 /* Schedule */ = {
@@ -323,6 +351,8 @@
 		52CCE39B23AFB62200964D05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5204FCD323BFE0F3006A2299 /* Mypage */,
+				5204FCCA23BFD72C006A2299 /* Calendar */,
 				52FAC5B523BF1FB500A3FA9B /* LaunchScreen */,
 				C591EB2223BE0F8000F953FB /* User */,
 				524BB5F223B3771400B82946 /* Schedule */,
@@ -339,6 +369,7 @@
 				52CCE39023AFB5F900964D05 /* LaunchScreen.storyboard */,
 				52CCE38B23AFB5F600964D05 /* Main.storyboard */,
 				524BB5F323B3772B00B82946 /* Schedule.storyboard */,
+				5204FCD123BFE0D8006A2299 /* Mypage.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -554,6 +585,7 @@
 				52CCE3B023B2229300964D05 /* NotoSansKR-Medium.otf in Resources */,
 				52CCE3B323B2229300964D05 /* NotoSansKR-Thin.otf in Resources */,
 				52CCE3C923B222B600964D05 /* Roboto-Thin.ttf in Resources */,
+				5204FCD223BFE0D8006A2299 /* Mypage.storyboard in Resources */,
 				52CCE3C723B222B600964D05 /* Roboto-Black.ttf in Resources */,
 				C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */,
 				52CCE3CD23B222B600964D05 /* Roboto-Italic.ttf in Resources */,
@@ -651,6 +683,7 @@
 				524BB5FE23B3CC0400B82946 /* GoingViewController.swift in Sources */,
 				52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */,
 				52AD2F4323BE7AB900706B0B /* FavoriteCell.swift in Sources */,
+				5204FCD023BFD87B006A2299 /* Calendar2ViewController.swift in Sources */,
 				524EC24F23B5E94F00A3CF0C /* UIView+Extension.swift in Sources */,
 				524BB5F123B331A900B82946 /* UIButton+Extension.swift in Sources */,
 				52608B8823B9116D0086AC3E /* DetailPath.swift in Sources */,
@@ -679,12 +712,15 @@
 				52608B8423B807E20086AC3E /* CircleCell.swift in Sources */,
 				52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */,
 				52FAC5BD23BF4FA700A3FA9B /* BusStopView.swift in Sources */,
+				5204FCCC23BFD757006A2299 /* UserSchedule.swift in Sources */,
 				52608B8E23B93A9F0086AC3E /* WalkCell.swift in Sources */,
 				52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */,
+				5204FCD523BFE0FF006A2299 /* MypageViewController.swift in Sources */,
 				524BB5FC23B3BDA600B82946 /* Kerning.swift in Sources */,
 				52EAC2D423BC856C00529CFE /* DetailScheduleViewController.swift in Sources */,
 				52608B8223B7C5300086AC3E /* Path.swift in Sources */,
 				52FAC5BB23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift in Sources */,
+				5204FCCE23BFD77A006A2299 /* CalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
