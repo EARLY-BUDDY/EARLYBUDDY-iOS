@@ -9,11 +9,39 @@
 import UIKit
 
 class DetailScheduleViewController: UIViewController {
+    
+    @IBOutlet var scheduleTitleLabel: UITextField!
+    @IBOutlet var scheduleTimeLabel: UITextField!
+    @IBOutlet var startLocationLabel: UILabel!
+    @IBOutlet var arriveLocationLabel: UILabel!
+    @IBOutlet var amongAlarmLabel: UILabel!
+    @IBOutlet var rangeAlarmCount: UILabel!
+    
+    
+    var titleText: String = ""
+    var timeText: String = ""
+    var startLocation: String = ""
+    var arriveLocation: String = ""
+    var alarmText: String = ""
+    var rangeAlarmLabel: String = ""
+    var rangeText: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scheduleTitleLabel.text = titleText
+        self.scheduleTimeLabel.text = timeText
+        self.amongAlarmLabel.text = alarmText
+        self.rangeAlarmCount.text = rangeAlarmLabel
 
         customNavigationBar()
+    }
+    
+    @IBAction func registerButton(_ sender: UIButton) {
+    }
+    
+    @objc func deleteAction() {
+        
     }
     
     func customNavigationBar() {
@@ -27,6 +55,7 @@ class DetailScheduleViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "ic_back")
         self.navigationController?.navigationBar.backItem?.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"icDelete"), landscapeImagePhone: UIImage(named:"icDelete"), style: .plain, target: self, action: #selector(deleteAction))
     }
 
 }

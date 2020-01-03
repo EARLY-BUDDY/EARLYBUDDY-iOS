@@ -9,31 +9,42 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
-
+    
     var onFinished: (() -> Void)?
     
     @IBOutlet var completeLabel: UILabel!
     @IBOutlet var checkButton: UIButton!
     @IBOutlet var homeButton: UIButton!
     
+    var titleText: String?
+    var timeText: String?
+    var alarmText: String?
+    var rangeText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.completeLabel.labelKern(kerningValue: -1.2)
         
         self.homeButton.addTarget(self, action: #selector(goToHome), for: .touchUpInside)
+        self.checkButton.addTarget(self, action: #selector(goToDetail), for: .touchUpInside)
     }
     
     @objc func goToHome() {
         self.dismiss(animated: true)
         onFinished?()
         
-//        guard let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoneViewController") as? NoneViewController else { return }
-//        nextVC.modalPresentationStyle = .fullScreen
-//        self.present(nextVC, animated: true, completion: nil)
+        //        guard let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoneViewController") as? NoneViewController else { return }
+        //        nextVC.modalPresentationStyle = .fullScreen
+        //        self.present(nextVC, animated: true, completion: nil)
     }
     
     // 일정 상세보기로 가는 함수 만들기
     
-
+    @objc func goToDetail() {
+        self.dismiss(animated: true)
+        onFinished?()
+    }
+    
+    
 }

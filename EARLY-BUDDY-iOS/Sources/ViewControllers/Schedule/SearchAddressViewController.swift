@@ -15,6 +15,12 @@ class SearchAddressViewController: UIViewController {
     @IBOutlet var searchAddressTV: UITableView!
     @IBOutlet var searchView: UIView!
     
+    let homeImage = UIImage(named: "icHomeSelectedSmall")
+    let companyImage = UIImage(named: "icCompanySelectedSmall")
+    let schoolImage = UIImage(named: "icSchoolSelectedSmall")
+    let etcImage = UIImage(named: "icEtcSelectedSmall")
+    let addImage = UIImage(named: "icLocationPlusSmall")
+    
     var startArrive: String = ""
     var resultAddr: String = ""
     var results: [Location] = []
@@ -30,6 +36,19 @@ class SearchAddressViewController: UIViewController {
         searchAddressTV.dataSource = self
         
         customNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "장소 선택"
+    }
+    
+    @IBAction func addFavorite(_ sender: UIButton) {
+        let img = sender.image(for: .normal)
+        if img == addImage {
+            guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else { return }
+            nextVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
     
 

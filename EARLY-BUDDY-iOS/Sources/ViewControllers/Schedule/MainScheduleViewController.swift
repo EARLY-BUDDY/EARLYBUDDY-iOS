@@ -361,9 +361,15 @@ class MainScheduleViewController: UIViewController {
         let myAlert = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        myAlert.onFinished = { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
+        
+        myAlert.titleText = titleTextField.text!
+        myAlert.timeText = timeTextField.text!
+        myAlert.alarmText = alarmChangeLabel.text!
+        myAlert.rangeText = rangeChangeLabel.text!
+        
+        myAlert.onFinished = { [weak self] in self?.navigationController?.popViewController(animated: true)
         }
+        
         self.present(myAlert, animated: true, completion: nil)
     }
     
