@@ -9,127 +9,46 @@
 import UIKit
 
 class ShowPathDetailViewController: UIViewController {
-
+    
     @IBOutlet var detailPathTV: UITableView!
-
+    
     var distanceWalk: [Int] = []
-    var items: [DataClass] = []
-
+    //    var searchPath: SearchPath?
+    var paths: [SearchPath] = []
+    //    var subPaths: [SubPath] = []
+    var subPaths: [ Int : [SubPath] ] = [:]
+    
+    let startPlace = "출발입니당"
+    let endPlace = "도착입니당 배고프네요"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         customNavigationBar()
-
-        SearchPathService.searchPathService.searchPath(127.08282465301149, 37.62072502768881, 127.03746391719882, 37.4720040276288, 0) { data in
+        
+        SearchPathService.shared.searchPath(127.08282465301149, 37.62072502768881, 127.03746391719882, 37.4720040276288, 0) { data in
             switch data {
-
-            case .success(let data):
-                let searchData = data as! DataClass
-
-                UserDefaults.standard.set(searchData.subwayBusCount, forKey: "subwayBusCount")
-                UserDefaults.standard.set(searchData.subwayCount, forKey: "subwayCount")
-                UserDefaults.standard.set(searchData.path, forKey: "path")
-
-                let searchPathData = data as! SearchPath
-
-                UserDefaults.standard.set(searchPathData.pathType, forKey: "pathType")
-                UserDefaults.standard.set(searchPathData.totalTime, forKey: "totalTime")
-                UserDefaults.standard.set(searchPathData.totalPay, forKey: "totalPay")
-                UserDefaults.standard.set(searchPathData.transitCount, forKey: "transitCount")
-                UserDefaults.standard.set(searchPathData.totalWalkTime, forKey: "totalWalkTime")
-//                UserDefaults.standard.set(searchPathData.leastTotalTime, forKey: "leastTotalTime")
-//                UserDefaults.standard.set(searchPathData.leastTransitCount, forKey: "leastTransitCount")
-//                UserDefaults.standard.set(searchPathData.leastTotalWalkTime, forKey: "leastTotalWalkTime")
-                UserDefaults.standard.set(searchPathData.subPath, forKey: "subPath")
-
-                let subPathData = data as! SubPath
-
-                UserDefaults.standard.set(subPathData.trafficType, forKey: "trafficType")
-                UserDefaults.standard.set(subPathData.distance, forKey: "distance")
-                UserDefaults.standard.set(subPathData.sectionTime, forKey: "sectionTime")
-                UserDefaults.standard.set(subPathData.stationCount, forKey: "stationCount")
-                UserDefaults.standard.set(subPathData.lane, forKey: "lane")
-                UserDefaults.standard.set(subPathData.startName, forKey: "startName")
-                UserDefaults.standard.set(subPathData.endName, forKey: "endName")
-                UserDefaults.standard.set(subPathData.passStopList, forKey: "passStopList")
-
-                let laneData = data as! Lane
-
-                UserDefaults.standard.set(laneData.busNo, forKey: "busNo")
-                UserDefaults.standard.set(laneData.type, forKey: "type")
-                UserDefaults.standard.set(laneData.name, forKey: "name")
-                UserDefaults.standard.set(laneData.subwayCode, forKey: "subwayCode")
-
-                let passStopData = data as! PassStopList
-
-                UserDefaults.standard.set(passStopData.stations, forKey: "stations")
-
-                let stationsData = data as! Station
-
-                UserDefaults.standard.set(stationsData.index, forKey: "index")
-                UserDefaults.standard.set(stationsData.stationName, forKey: "stationName")
-
-                searchPathData.subPath.forEach { p in
-                    if p.trafficType == 1 {
-                        let min = p.sectionTime
-                        _ = p.stationCount
-                        let lane = p.lane
-                        var code: [Int] = []
-                        lane?.forEach({ sub in
-                            code.append(sub.subwayCode!)
-                        })
-                        let startName = p.startName
-                        let endName = p.endName
-                        var stations: [String] = []
-
-                        p.passStopList?.stations.forEach({ s in
-                            stations.append(s.stationName)
-                        })
-                        
-                        let pathData = DetailPath(stations: stations, type: .subway, startStation: startName!, startNum: String(code[0]), arriveStation: endName!, stationNum: stations.count, time: min)
-//                        self.items.append(pathData)
-                    } else if p.trafficType == 2 {
-                        let min = p.sectionTime
-                        _ = p.stationCount
-                        let lane = p.lane
-                        var code: [String] = []
-                        lane?.forEach({ bus in
-                            code.append(bus.busNo!)
-                        })
-                        let startName = p.startName
-                        let endName = p.endName
-                        var stations: [String] = []
-
-                        p.passStopList?.stations.forEach({ s in
-                            stations.append(s.stationName)
-                        })
-
-                        let pathData = DetailPath(stations: stations, type: .bus, startStation: startName!, startNum: code[0], arriveStation: endName!, stationNum: stations.count, time: min)
-//                        self.items.append(pathData)
-                    } else if p.trafficType == 3 {
-                        let min = p.sectionTime
-                        let distance = p.distance
-                        _ = p.sectionTime
-                        self.distanceWalk.append(distance)
-
-                        let pathData = DetailPath(stations: [], type: .walk, startStation: "", startNum: "", arriveStation: "", stationNum: 0, time: min)
-//                        self.items.append(pathData)
-                    }
-                    print("items****************")
-                    print(self.items)
+            case .success(let result):
+                print("success")
+                let searchPathResult = result as? SearchPathResponse
+                self.paths = searchPathResult?.data?.path ?? []
+                for index in 0 ... self.paths.count {
+                    self.subPaths[index] = self.paths[index].subPath
+                    print("subPaths  : ", self.subPaths)
                 }
-
             case .requestErr:
-                print("경로를 찾지 못함")
+                print("requestErr")
             }
         }
-
-//        detailPathTV.delegate = self
-//        detailPathTV.dataSource = self
+        
+        //        if let searchPath = searchPath {
+        //            self.subPaths = searchPath.subPath
+        //        }
+        
+        //        detailPathTV.delegate = self
+        detailPathTV.dataSource = self
         detailPathTV.separatorStyle = .none
-
     }
-
+    
     func customNavigationBar() {
         self.view.layer.backgroundColor = UIColor.white.cgColor
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -143,5 +62,61 @@ class ShowPathDetailViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
-
+    
 }
+
+extension ShowPathDetailViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return subPaths.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let subPath = subPaths[indexPath.row]
+        var previousPath: SubPath
+        var nextPath: SubPath
+        if indexPath.row != 0 {
+            previousPath = subPaths[2]![indexPath.row - 1]
+        }
+        if indexPath.row != subPaths.count - 1 {
+            nextPath = subPaths[2]![indexPath.row + 1]
+        }
+        
+        
+        switch subPath![2].trafficType {
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ClickCell", for: indexPath) as! ClickCell
+            for (_, station) in subPath![2].passStopList!.stations.enumerated()  {
+                let busStopView = BusStopView.instanceFromNib()
+                busStopView.titleLabel.text = station.stationName
+                busStopView.isHidden = true
+                cell.busStopStackView.addArrangedSubview(busStopView)
+            }
+            return cell
+            
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ClickCell", for: indexPath) as! ClickCell
+            
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WalkCell", for: indexPath) as! WalkCell
+            cell.startLocLabel.text = startPlace
+            cell.walkArriveLabel.text = endPlace
+            cell.distanceLabel.text = "도보 \(subPath![2].distance)m"
+            cell.walkTimeLabel.text = "약 \(subPath![2].sectionTime)분"
+            return cell
+            
+        default:
+            assert(false)
+        }
+    }
+    
+}
+
+extension ShowPathDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
+
+

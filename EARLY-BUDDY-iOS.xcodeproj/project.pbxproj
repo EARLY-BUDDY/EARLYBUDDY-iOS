@@ -22,6 +22,7 @@
 		524EC24F23B5E94F00A3CF0C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EC24E23B5E94F00A3CF0C /* UIView+Extension.swift */; };
 		524EC25123B5F3C700A3CF0C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EC25023B5F3C700A3CF0C /* PopUpViewController.swift */; };
 		524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EC25223B6068D00A3CF0C /* Shadow.swift */; };
+		525E3B5D23BF52F40067E75A /* BusStopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525E3B5C23BF52F40067E75A /* BusStopView.xib */; };
 		52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B7923B74C5B0086AC3E /* SelectPathViewController.swift */; };
 		52608B7D23B7A6CE0086AC3E /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B7C23B7A6CE0086AC3E /* LineCell.swift */; };
 		52608B7F23B7B1300086AC3E /* PathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52608B7E23B7B1300086AC3E /* PathCell.swift */; };
@@ -38,6 +39,7 @@
 		52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3E23BE351300706B0B /* AddressCell.swift */; };
 		52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */; };
 		52AD2F4323BE7AB900706B0B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */; };
+		52AD2F4523BF1ED900706B0B /* ios_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 52AD2F4423BF1ED800706B0B /* ios_splash.json */; };
 		52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2F12723B22F5500C2BD75 /* NoneViewController.swift */; };
 		52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38523AFB5F600964D05 /* AppDelegate.swift */; };
 		52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38723AFB5F600964D05 /* SceneDelegate.swift */; };
@@ -68,6 +70,10 @@
 		52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2D723BD079100529CFE /* APIConstants.swift */; };
 		52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DA23BD088900529CFE /* SearchPathResponse.swift */; };
 		52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */; };
+		52FAC5B723BF1FC600A3FA9B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */; };
+		52FAC5B923BF38DF00A3FA9B /* SearchPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5B823BF38DF00A3FA9B /* SearchPopUpViewController.swift */; };
+		52FAC5BB23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5BA23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift */; };
+		52FAC5BD23BF4FA700A3FA9B /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5BC23BF4FA700A3FA9B /* BusStopView.swift */; };
 		C591EB1C23BE0E0400F953FB /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1A23BE0E0400F953FB /* Calendar.storyboard */; };
 		C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1B23BE0E0400F953FB /* User.storyboard */; };
 		C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2323BE0F9500F953FB /* SignUpViewController.swift */; };
@@ -102,6 +108,7 @@
 		524EC24E23B5E94F00A3CF0C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		524EC25023B5F3C700A3CF0C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		524EC25223B6068D00A3CF0C /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		525E3B5C23BF52F40067E75A /* BusStopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusStopView.xib; sourceTree = "<group>"; };
 		52608B7923B74C5B0086AC3E /* SelectPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPathViewController.swift; sourceTree = "<group>"; };
 		52608B7C23B7A6CE0086AC3E /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
 		52608B7E23B7B1300086AC3E /* PathCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCell.swift; sourceTree = "<group>"; };
@@ -118,6 +125,7 @@
 		52AD2F3E23BE351300706B0B /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
 		52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		52AD2F4423BF1ED800706B0B /* ios_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ios_splash.json; sourceTree = "<group>"; };
 		52C2F12723B22F5500C2BD75 /* NoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneViewController.swift; sourceTree = "<group>"; };
 		52CCE38223AFB5F600964D05 /* EARLY-BUDDY-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BUDDY-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CCE38523AFB5F600964D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,10 @@
 		52EAC2D723BD079100529CFE /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		52EAC2DA23BD088900529CFE /* SearchPathResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPathResponse.swift; sourceTree = "<group>"; };
 		52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPathService.swift; sourceTree = "<group>"; };
+		52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		52FAC5B823BF38DF00A3FA9B /* SearchPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPopUpViewController.swift; sourceTree = "<group>"; };
+		52FAC5BA23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLargePopUpViewController.swift; sourceTree = "<group>"; };
+		52FAC5BC23BF4FA700A3FA9B /* BusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopView.swift; sourceTree = "<group>"; };
 		63934CFA3C66175262122920 /* Pods-EARLY-BUDDY-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.debug.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EARLY_BUDDY_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.release.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +219,10 @@
 				52EAC2D323BC856C00529CFE /* DetailScheduleViewController.swift */,
 				52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */,
 				52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */,
+				52FAC5B823BF38DF00A3FA9B /* SearchPopUpViewController.swift */,
+				52FAC5BA23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift */,
+				52FAC5BC23BF4FA700A3FA9B /* BusStopView.swift */,
+				525E3B5C23BF52F40067E75A /* BusStopView.xib */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -272,6 +288,7 @@
 		52CCE38423AFB5F600964D05 /* EARLY-BUDDY-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				52AD2F4423BF1ED800706B0B /* ios_splash.json */,
 				52CCE39323AFB5F900964D05 /* Info.plist */,
 				52CCE38523AFB5F600964D05 /* AppDelegate.swift */,
 				52CCE38723AFB5F600964D05 /* SceneDelegate.swift */,
@@ -306,6 +323,7 @@
 		52CCE39B23AFB62200964D05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52FAC5B523BF1FB500A3FA9B /* LaunchScreen */,
 				C591EB2223BE0F8000F953FB /* User */,
 				524BB5F223B3771400B82946 /* Schedule */,
 				52CCE3A823B2143F00964D05 /* Main */,
@@ -413,6 +431,14 @@
 				52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */,
 			);
 			path = SearchPath;
+			sourceTree = "<group>";
+		};
+		52FAC5B523BF1FB500A3FA9B /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		8236351351357B2D39E16DDF /* Frameworks */ = {
@@ -535,7 +561,9 @@
 				52CCE3C223B222B600964D05 /* Roboto-LightItalic.ttf in Resources */,
 				52CCE39223AFB5F900964D05 /* LaunchScreen.storyboard in Resources */,
 				52CCE3C623B222B600964D05 /* Roboto-Light.ttf in Resources */,
+				52AD2F4523BF1ED900706B0B /* ios_splash.json in Resources */,
 				52CCE3CC23B222B600964D05 /* Roboto-BlackItalic.ttf in Resources */,
+				525E3B5D23BF52F40067E75A /* BusStopView.xib in Resources */,
 				52CCE3C423B222B600964D05 /* Roboto-MediumItalic.ttf in Resources */,
 				52CCE38F23AFB5F900964D05 /* Assets.xcassets in Resources */,
 				52CCE3B223B2229300964D05 /* NotoSansKR-Black.otf in Resources */,
@@ -602,6 +630,7 @@
 			files = (
 				C591EB2823BE0FB900F953FB /* LoginViewController.swift in Sources */,
 				52608B8C23B91E5C0086AC3E /* ClickCell.swift in Sources */,
+				52FAC5B723BF1FC600A3FA9B /* LaunchScreenViewController.swift in Sources */,
 				C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */,
 				524BB5F823B3B1F500B82946 /* NowViewController.swift in Sources */,
 				52041B0A23BA7AB000A6E6AB /* PreferPopUpViewController.swift in Sources */,
@@ -637,6 +666,7 @@
 				C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */,
 				524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */,
 				52AD2F3423BE226D00706B0B /* SearchAddressService.swift in Sources */,
+				52FAC5B923BF38DF00A3FA9B /* SearchPopUpViewController.swift in Sources */,
 				524BB5EF23B3318800B82946 /* UIColor+Extension.swift in Sources */,
 				52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */,
 				C591EB4123BF5D8A00F953FB /* SignUpResponse.swift in Sources */,
@@ -648,11 +678,13 @@
 				C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */,
 				52608B8423B807E20086AC3E /* CircleCell.swift in Sources */,
 				52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */,
+				52FAC5BD23BF4FA700A3FA9B /* BusStopView.swift in Sources */,
 				52608B8E23B93A9F0086AC3E /* WalkCell.swift in Sources */,
 				52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */,
 				524BB5FC23B3BDA600B82946 /* Kerning.swift in Sources */,
 				52EAC2D423BC856C00529CFE /* DetailScheduleViewController.swift in Sources */,
 				52608B8223B7C5300086AC3E /* Path.swift in Sources */,
+				52FAC5BB23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

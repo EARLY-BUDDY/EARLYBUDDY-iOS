@@ -9,6 +9,7 @@ target 'EARLY-BUDDY-iOS' do
 
   pod 'Alamofire'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'lottie-ios'
   pod 'SwiftyJSON'
   
 end
