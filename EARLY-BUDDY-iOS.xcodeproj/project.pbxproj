@@ -38,6 +38,7 @@
 		52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3E23BE351300706B0B /* AddressCell.swift */; };
 		52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */; };
 		52AD2F4323BE7AB900706B0B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */; };
+		52AD2F4523BF1ED900706B0B /* ios_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 52AD2F4423BF1ED800706B0B /* ios_splash.json */; };
 		52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2F12723B22F5500C2BD75 /* NoneViewController.swift */; };
 		52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38523AFB5F600964D05 /* AppDelegate.swift */; };
 		52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38723AFB5F600964D05 /* SceneDelegate.swift */; };
@@ -68,6 +69,7 @@
 		52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2D723BD079100529CFE /* APIConstants.swift */; };
 		52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DA23BD088900529CFE /* SearchPathResponse.swift */; };
 		52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */; };
+		52FAC5B723BF1FC600A3FA9B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,7 @@
 		52AD2F3E23BE351300706B0B /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
 		52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		52AD2F4423BF1ED800706B0B /* ios_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ios_splash.json; sourceTree = "<group>"; };
 		52C2F12723B22F5500C2BD75 /* NoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneViewController.swift; sourceTree = "<group>"; };
 		52CCE38223AFB5F600964D05 /* EARLY-BUDDY-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BUDDY-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CCE38523AFB5F600964D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		52EAC2D723BD079100529CFE /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		52EAC2DA23BD088900529CFE /* SearchPathResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPathResponse.swift; sourceTree = "<group>"; };
 		52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPathService.swift; sourceTree = "<group>"; };
+		52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		63934CFA3C66175262122920 /* Pods-EARLY-BUDDY-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.debug.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EARLY_BUDDY_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.release.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		52CCE38423AFB5F600964D05 /* EARLY-BUDDY-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				52AD2F4423BF1ED800706B0B /* ios_splash.json */,
 				52CCE39323AFB5F900964D05 /* Info.plist */,
 				52CCE38523AFB5F600964D05 /* AppDelegate.swift */,
 				52CCE38723AFB5F600964D05 /* SceneDelegate.swift */,
@@ -272,6 +277,7 @@
 		52CCE39B23AFB62200964D05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52FAC5B523BF1FB500A3FA9B /* LaunchScreen */,
 				524BB5F223B3771400B82946 /* Schedule */,
 				52CCE3A823B2143F00964D05 /* Main */,
 			);
@@ -373,6 +379,14 @@
 			path = SearchPath;
 			sourceTree = "<group>";
 		};
+		52FAC5B523BF1FB500A3FA9B /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		8236351351357B2D39E16DDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +464,7 @@
 				52CCE3C223B222B600964D05 /* Roboto-LightItalic.ttf in Resources */,
 				52CCE39223AFB5F900964D05 /* LaunchScreen.storyboard in Resources */,
 				52CCE3C623B222B600964D05 /* Roboto-Light.ttf in Resources */,
+				52AD2F4523BF1ED900706B0B /* ios_splash.json in Resources */,
 				52CCE3CC23B222B600964D05 /* Roboto-BlackItalic.ttf in Resources */,
 				52CCE3C423B222B600964D05 /* Roboto-MediumItalic.ttf in Resources */,
 				52CCE38F23AFB5F900964D05 /* Assets.xcassets in Resources */,
@@ -516,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52608B8C23B91E5C0086AC3E /* ClickCell.swift in Sources */,
+				52FAC5B723BF1FC600A3FA9B /* LaunchScreenViewController.swift in Sources */,
 				524BB5F823B3B1F500B82946 /* NowViewController.swift in Sources */,
 				52041B0A23BA7AB000A6E6AB /* PreferPopUpViewController.swift in Sources */,
 				524BB5F623B377E600B82946 /* MainScheduleViewController.swift in Sources */,
