@@ -107,7 +107,6 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
                 thirdContainerView.setColor(.lightGray)
             }
         }
-        print("names  : ", names)
         registerButton.isEnabled = true
         registerButton.backgroundColor = .mainblue
         for name in names {

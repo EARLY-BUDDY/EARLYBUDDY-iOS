@@ -42,39 +42,37 @@ class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
         searchTextField.delegate = self
         searchAddressTV.delegate = self
         searchAddressTV.dataSource = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     @IBAction func backAction(_ sender: Any) {
         self.delegate?.textData(withParameter: searchTextField.text!)
-//        favoriteLocationVC.delegate = self
-//        let locationVC = self.storyboard?.instantiateViewController(identifier: "FavoriteLocationViewController") as! FavoriteLocationViewController
-//        locationVC.localLabels[selectedIdx!] = searchTextField.text
-//        locationVC?.firstLocationLabel.textColor = .black
         self.navigationController?.popViewController(animated: true)
     }
-        
 }
 
-//extension SearchFavoriteViewController: UITextFieldDelegate {
-//
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        let address = textField.text!
-//
-//        SearchAddressService.searchAddressService.searchAddress(address) { data in
-//            switch data {
-//            case .success(let data):
-//                let addressResult = data as! SearchAddressResponse
-//                addressResult.data.forEach { r in
-//                    self.results.append(r)
-//                }
-//
-//            case .requestErr:
-//                print("경로를 찾지 못함")
-//            }
-//        }
-//        return true
-//    }
-//}
+extension SearchFavoriteViewController {
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let address = textField.text!
+        SearchAddressService.searchAddressService.searchAddress(address) { data in
+            switch data {
+            case .success(let data):
+                let addressResult = data as! SearchAddressResponse
+                addressResult.data.forEach { r in
+                    self.results.append(r)
+                }
+            case .requestErr:
+                print("경로를 찾지 못함")
+            }
+        }
+    }
+}
 
 extension SearchFavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -58,8 +58,24 @@ class LoginViewController: UIViewController {
         label.textColor = .darkGray
     }
     @IBAction func LoginAction(_ sender: Any) {
-        // 대충 통신한다는 내용
-        goNextView()
+        loginNetwork()
+        self.goNextView()
+    }
+    
+    func loginNetwork() {
+        let id = gsno(idTextField.text)
+        let passwd = gsno(pwTextField.text)
+        print(id, passwd)
+        UsersService.usersService.loginNetwork(id, passwd) { data in
+            switch data {
+            case .success(let data):
+                print(" signupNetwork data : ", data)
+                let result = data as? LoginResponse
+                print(" result data : ", result)
+            case .requestErr:
+                print("경로를 찾지 못함")
+            }
+        }
     }
     
     func goNextView() {
@@ -70,16 +86,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func goSignUpAction(_ sender: Any) {
-        
-        guard let signUpVC = self.storyboard!.instantiateViewController(withIdentifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else {
+        guard let signUpVC = self.storyboard!.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else {
             return }
         signUpVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(signUpVC, animated: true)
-        
-//        guard let signUpVC = self.storyboard!.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else {
-//            return }
-//        signUpVC.modalPresentationStyle = .fullScreen
-//        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     @IBAction func autoLoginButton(_ sender: CheckBoxButton) {

@@ -31,18 +31,18 @@ struct SearchPathService {
                             do {
                                 let decoder = JSONDecoder()
                                 print("value", value)
-                                let result = try decoder.decode(SearchPathResponse.self, from: value)
+//                                let result = try decoder.decode(SearchPathService.self, from: value)
                                 
                                 // ResponseString에 있는 success로 분기 처리
                                 // ResponseString에 있는 이름이 success
-                                switch result.success {
-                                    
-                                case true:
-                                    print("success")
-                                    completion(.success(result.data!))
-                                case false:
-                                    completion(.requestErr)
-                                }
+//                                switch result.success {
+//                                    
+//                                case true:
+//                                    print("success")
+//                                    completion(.success(result.data!))
+//                                case false:
+//                                    completion(.requestErr)
+//                                }
                             }
                             catch {
                                 print(error.localizedDescription)

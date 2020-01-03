@@ -82,6 +82,9 @@
 		C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */; };
 		C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */; };
 		C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */; };
+		C591EB3E23BF5AA200F953FB /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3D23BF5AA200F953FB /* UsersService.swift */; };
+		C591EB4123BF5D8A00F953FB /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */; };
+		C591EB4323BF655900F953FB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB4223BF655900F953FB /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +167,9 @@
 		C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePopUpViewController.swift; sourceTree = "<group>"; };
 		C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteViewController.swift; sourceTree = "<group>"; };
 		C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndViewController.swift; sourceTree = "<group>"; };
+		C591EB3D23BF5AA200F953FB /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C591EB4223BF655900F953FB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +288,6 @@
 				52608B7B23B7A56E0086AC3E /* Cells */,
 				52CCE39F23AFB6EA00964D05 /* Extensions */,
 				52CCE39E23AFB6E600964D05 /* Networking */,
-				52CCE39D23AFB6DD00964D05 /* Model */,
 				52CCE39B23AFB62200964D05 /* ViewControllers */,
 			);
 			path = Sources;
@@ -323,6 +328,7 @@
 		52CCE39D23AFB6DD00964D05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB3F23BF5CA200F953FB /* User */,
 				52AD2F3523BE227D00706B0B /* SearchAddress */,
 				52EAC2D923BD087D00529CFE /* SearchPath */,
 				52608B8023B7C5060086AC3E /* Path */,
@@ -333,10 +339,12 @@
 		52CCE39E23AFB6E600964D05 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB3C23BF5A7C00F953FB /* Users */,
 				52AD2F3223BE226100706B0B /* SearchAddress */,
 				52EAC2DC23BD0D6F00529CFE /* SearchPath */,
 				52EAC2D523BD06E800529CFE /* NetworkResult.swift */,
 				52EAC2D723BD079100529CFE /* APIConstants.swift */,
+				52CCE39D23AFB6DD00964D05 /* Model */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -437,6 +445,23 @@
 				C591EB3023BE2ABC00F953FB /* checkButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C591EB3C23BF5A7C00F953FB /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB3D23BF5AA200F953FB /* UsersService.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		C591EB3F23BF5CA200F953FB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */,
+				C591EB4223BF655900F953FB /* LoginResponse.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,6 +605,7 @@
 				C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */,
 				524BB5F823B3B1F500B82946 /* NowViewController.swift in Sources */,
 				52041B0A23BA7AB000A6E6AB /* PreferPopUpViewController.swift in Sources */,
+				C591EB3E23BF5AA200F953FB /* UsersService.swift in Sources */,
 				524BB5F623B377E600B82946 /* MainScheduleViewController.swift in Sources */,
 				C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */,
 				52608B7D23B7A6CE0086AC3E /* LineCell.swift in Sources */,
@@ -607,11 +633,13 @@
 				C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */,
 				52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */,
 				52EAC2D223BC830000529CFE /* NoScheduleViewController.swift in Sources */,
+				C591EB4323BF655900F953FB /* LoginResponse.swift in Sources */,
 				C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */,
 				524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */,
 				52AD2F3423BE226D00706B0B /* SearchAddressService.swift in Sources */,
 				524BB5EF23B3318800B82946 /* UIColor+Extension.swift in Sources */,
 				52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */,
+				C591EB4123BF5D8A00F953FB /* SignUpResponse.swift in Sources */,
 				52AD2F3923BE2EE700706B0B /* SearchAddressViewController.swift in Sources */,
 				52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */,
 				C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */,
