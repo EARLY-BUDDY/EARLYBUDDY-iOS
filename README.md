@@ -1,9 +1,11 @@
-# EARLY BUDDY (얼리버디) iOS
+# 🐥 we are EARLY-BUDDY-iOS
 
-### 서비스 소개
+<img src="./images/eb_ic.png" width="30%" height="30%"></img>
 
-약속시간을 위한 나만의 대중교통 배차 알리미 얼리버디 🐧💞
+### 얼리버디 - 약속시간을 위한 나만의 대중교통 배차 알리미
 
+> SOPT 25기 Appjam '얼리버디'
+> 프로젝트 기간 2019.12 ~ 진행중
 ------
 
 ### Work-Flow
