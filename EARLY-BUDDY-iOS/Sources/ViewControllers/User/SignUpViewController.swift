@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         idErrorLable.font = UIFont(name: fontMedium, size: 12)
         passwdErrorLabel.font = UIFont(name: fontMedium, size: 12)
         pwCheckErrorLabel.font = UIFont(name: fontMedium, size: 12)
-//        signUpButton.isEnabled = false
+        signUpButton.isEnabled = false
     }
     
     func signupNetwork() {
@@ -72,6 +72,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 print(" signupNetwork data : ",data)
                 resultData = data as? SignUpResponse
                 print("resultData : ", resultData)
+                let myAlert = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCompleteViewController") as! SignUpCompleteViewController
+                myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+                myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                myAlert.onFinished = { [weak self] in
+                    self?.goLoginView()
+                }
+                self.present(myAlert, animated: true, completion: nil)
             case .requestErr:
                 print("경로를 찾지 못함")
             }
@@ -82,19 +89,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let sub = UIView(frame: self.view.frame)
         sub.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
         self.view.addSubview(sub)
-
-        let myAlert = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCompleteViewController") as! SignUpCompleteViewController
-        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        myAlert.onFinished = { [weak self] in
-            self?.goLoginView()
-        }
         signupNetwork()
-//        if signupNetwork() {
-            self.present(myAlert, animated: true, completion: nil)
-//        } else {
-//            print("xxxxxxxx")
-//        }
     }
     
     func goLoginView(){

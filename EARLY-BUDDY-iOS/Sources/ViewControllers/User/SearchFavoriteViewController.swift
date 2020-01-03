@@ -8,12 +8,7 @@
 
 import UIKit
 
-protocol SearchFavoriteDelegate {
-    func textData(withParameter param: String)
-}
-
 class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
-    var delegate: SearchFavoriteDelegate?
     
     @IBOutlet weak var searchContainerView: UIView!
     @IBOutlet var startArriveLabel: UILabel!
@@ -51,27 +46,30 @@ class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func backAction(_ sender: Any) {
-        self.delegate?.textData(withParameter: searchTextField.text!)
+        let defaults = UserDefaults.standard
+        var names = defaults.stringArray(forKey: "favoriteNames") ?? [String]()
+        names[selectedIdx ?? 0] = (startArriveLabel.text ?? "") + searchTextField.text!
+        defaults.set(names, forKey: "favoriteNames")
         self.navigationController?.popViewController(animated: true)
     }
 }
 
 extension SearchFavoriteViewController {
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        let address = textField.text!
-        SearchAddressService.searchAddressService.searchAddress(address) { data in
-            switch data {
-            case .success(let data):
-                let addressResult = data as! SearchAddressResponse
-                addressResult.data.forEach { r in
-                    self.results.append(r)
-                }
-            case .requestErr:
-                print("경로를 찾지 못함")
-            }
-        }
-    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        let address = textField.text!
+//        SearchAddressService.shared.searchAddress(address) { data in
+//            switch data {
+//            case .success(let data):
+//                let addressResult = data as! SearchAddressResponse
+////                addressResult.data.forEach { r in
+////                    self.results.append(r)
+//                }
+//            case .requestErr:
+//                print("경로를 찾지 못함")
+//            }
+//        }
+//    }
 }
 
 extension SearchFavoriteViewController: UITableViewDelegate, UITableViewDataSource {
@@ -82,9 +80,9 @@ extension SearchFavoriteViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
         
-        cell.placeName.text = results[indexPath.row].placeName
-        cell.addressName.text = results[indexPath.row].addressName
-        cell.roadAddressName.text = results[indexPath.row].roadAddressName
+//        cell.placeName.text = results[indexPath.row].placeName
+//        cell.addressName.text = results[indexPath.row].addressName
+//        cell.roadAddressName.text = results[indexPath.row].roadAddressName
         
         return cell
     }

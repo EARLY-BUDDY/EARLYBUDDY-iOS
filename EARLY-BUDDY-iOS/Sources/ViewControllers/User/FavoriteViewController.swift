@@ -1,5 +1,5 @@
 //
-//  FavoriteLocationViewController.swift
+//  FavoriteViewController.swift
 //  EARLY-BUDDY-iOS
 //
 //  Created by 박경선 on 2020/01/02.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
-    
-    weak var delegate: SearchFavoriteViewController!
+class FavoriteViewController: UIViewController {
     let fontRegular = "NotoSansKR-Regular"
     let fontMedium = "NotoSansKR-Medium"
     
@@ -28,51 +26,25 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
     @IBOutlet weak var secondContainerView: RoundedCornerView!
     @IBOutlet weak var thirdContainerView: RoundedCornerView!
     
-    
-    var firstText: String = "장소를 등록해 주세요."
-    var secondText: String = "장소를 등록해 주세요."
-    var thirdText: String = "장소를 등록해 주세요."
-    //    let homeName = "icHomeSelectedBig"
-    //    let etcName = "icEtcSelectedBig"
-    //    let companyName = "icCompanySelectedBig"
-    //    let schoolName = "icSchoolSelectedBig"
-    
     @IBOutlet weak var registerButton: UIButton!
      
     var subView: UIView = UIView()
     
     var buttonNames: [String] = ["btnLocationPlus", "btnLocationPlus", "btnLocationPlus"]
-    var localLabels: [String] = []
+    var localLabels: [String] = ["장소를 등록해 주세요.", "장소를 등록해 주세요.", "장소를 등록해 주세요."]
     var buttons: [UIButton] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let searchFavoriteViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchFavoriteViewController") as! SearchFavoriteViewController
-        searchFavoriteViewController.delegate = self
         let defaults = UserDefaults.standard
         defaults.set(buttonNames, forKey: "favoriteIconNames")
+        defaults.set(localLabels, forKey: "favoriteNames")
         setInit()
         setLabel(firstLocationLabel)
         setLabel(secondLocationLabel)
         setLabel(thirdLocationLabel)
         buttons = [firstLocationButton, secondLocationButton, thirdLocationButton]
-    }
-    func textData(withParameter param: String) {
-        print("param  : ", param)
-        localLabels = [param, secondText, thirdText]
-        firstLocationLabel.text = localLabels[0]
-        secondLocationLabel.text = localLabels[1]
-        thirdLocationLabel.text = localLabels[2]
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("232323232")
-        if segue.identifier == "show" {
-            print("asdfsdfasdfasdfsa")
-            let viewController : SearchFavoriteViewController = segue.destination as! SearchFavoriteViewController
-            viewController.delegate = self
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,33 +52,42 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
             subView.removeFromSuperview()
         }
         
-        localLabels = [firstText, secondText, thirdText]
-        firstLocationLabel.text = localLabels[0]
-        secondLocationLabel.text = localLabels[1]
-        thirdLocationLabel.text = localLabels[2]
-        
         let defaults = UserDefaults.standard
         let names = defaults.stringArray(forKey: "favoriteIconNames") ?? [String]()
         for index in 0 ... buttons.count - 1 {
             buttons[index].setImage(UIImage(named: names[index]), for: .normal)
         }
+        let localLabels = defaults.stringArray(forKey: "favoriteNames") ?? [String]()
+        
+        firstLocationLabel.text = localLabels[0]
+        secondLocationLabel.text = localLabels[1]
+        thirdLocationLabel.text = localLabels[2]
+        
         for text in localLabels {
             if firstLocationLabel.text != "장소를 등록해 주세요." {
                 firstContainerView.setColor(.mainblue)
+                firstLocationLabel.textColor = .black
+                
             } else {
                 firstContainerView.setColor(.lightGray)
+                firstLocationLabel.textColor = .lightGray
             }
             if secondLocationLabel.text != "장소를 등록해 주세요." {
                 secondContainerView.setColor(.mainblue)
+                secondLocationLabel.textColor = .black
             } else {
                 secondContainerView.setColor(.lightGray)
+                secondLocationLabel.textColor = .lightGray
             }
             if thirdLocationLabel.text != "장소를 등록해 주세요." {
                 thirdContainerView.setColor(.mainblue)
+                thirdLocationLabel.textColor = .black
             } else {
                 thirdContainerView.setColor(.lightGray)
+                thirdLocationLabel.textColor = .lightGray
             }
         }
+        
         registerButton.isEnabled = true
         registerButton.backgroundColor = .mainblue
         for name in names {
@@ -128,7 +109,6 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
         loginVC.isSkip = true
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
-    
     
     func setInit(){
         let imageView : UIImageView = UIImageView(image: UIImage(named: "backLocation.png")!)
@@ -171,7 +151,5 @@ class FavoriteLocationViewController: UIViewController, SearchFavoriteDelegate {
         }
         self.present(favPop, animated: true, completion: nil)
     }
-    
-    
 }
 

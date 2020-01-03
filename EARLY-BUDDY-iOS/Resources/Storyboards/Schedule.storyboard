@@ -1863,7 +1863,7 @@
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgBlueBig" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-jS-cUv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                             </imageView>
                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEt-Hn-Oj5">
                                 <rect key="frame" x="18" y="7" width="339" height="38"/>
@@ -1935,7 +1935,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약 3분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-ht-yLO">
-                                                    <rect key="frame" x="20" y="51" width="31.666666666666671" height="18"/>
+                                                    <rect key="frame" x="20" y="51" width="31" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="qCo-6j-vKB"/>
                                                     </constraints>
@@ -1944,13 +1944,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="집 : 서울특별시 광진구 아차산로 463-4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yf-on-oGk">
-                                                    <rect key="frame" x="81.333333333333343" y="10" width="258.33333333333326" height="24"/>
+                                                    <rect key="frame" x="90.333333333333329" y="10.000000000000002" width="248.66666666666669" height="18.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="16"/>
                                                     <color key="textColor" red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테크노마트앞. 강변역 까지 걷기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7E-Bi-KWY">
-                                                    <rect key="frame" x="81.333333333333314" y="72" width="209" height="21"/>
+                                                    <rect key="frame" x="90.333333333333314" y="66.666666666666671" width="198" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="cPi-Rn-6EW"/>
                                                     </constraints>
@@ -1959,7 +1959,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도보 642m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gy-Dm-3Lv">
-                                                    <rect key="frame" x="81.333333333333329" y="44" width="56.666666666666671" height="18"/>
+                                                    <rect key="frame" x="90.333333333333329" y="38.666666666666664" width="54.666666666666671" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="MGp-sr-TIo"/>
                                                     </constraints>
@@ -1968,10 +1968,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imgPathWalkVertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Qo-jd-wed">
-                                                    <rect key="frame" x="59.333333333333336" y="16" width="9.0000000000000071" height="66"/>
+                                                    <rect key="frame" x="59.333333333333343" y="16" width="18" height="132"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-Mi-xGN">
-                                                    <rect key="frame" x="44" y="108.66666666666667" width="290" height="0.0"/>
+                                                    <rect key="frame" x="44" y="103.33333333333333" width="290" height="0.0"/>
                                                     <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="290" id="gyE-G0-YnQ"/>
@@ -2027,7 +2027,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배차간격 매일 6 - 20분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF8-ff-yxC">
-                                                    <rect key="frame" x="84.666666666666657" y="63.666666666666657" width="113.66666666666666" height="21"/>
+                                                    <rect key="frame" x="84.666666666666686" y="63.666666666666657" width="111" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BBE-C4-qaw"/>
                                                     </constraints>
@@ -2044,7 +2044,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약 3분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU4-Go-E4c">
-                                                    <rect key="frame" x="20" y="83.666666666666671" width="31.666666666666671" height="18"/>
+                                                    <rect key="frame" x="20" y="83.666666666666671" width="31" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="bM0-ec-nIT"/>
                                                     </constraints>
@@ -2053,7 +2053,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14개 정류장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-tr-zX4">
-                                                    <rect key="frame" x="84.666666666666671" y="92.666666666666671" width="61.333333333333329" height="18"/>
+                                                    <rect key="frame" x="84.666666666666671" y="92.666666666666671" width="58.333333333333329" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="7bg-zW-zRQ"/>
                                                     </constraints>
@@ -2082,7 +2082,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테크노마트앞. 강변역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwX-wy-xml">
-                                                    <rect key="frame" x="139" y="16.666666666666668" width="141" height="24.000000000000004"/>
+                                                    <rect key="frame" x="139" y="16.666666666666668" width="133.66666666666663" height="24.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="OOm-go-72T"/>
                                                     </constraints>
@@ -2091,7 +2091,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-3H-WWu">
-                                                    <rect key="frame" x="311" y="19.666666666666668" width="54" height="19.000000000000004"/>
+                                                    <rect key="frame" x="303.66666666666669" y="19.666666666666668" width="54" height="19.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19" id="0mt-Rz-2sw"/>
                                                         <constraint firstAttribute="width" constant="54" id="Yhp-ec-ZnH"/>
@@ -2102,7 +2102,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-53-NWg">
-                                                    <rect key="frame" x="154" y="92.666666666666671" width="22" height="22"/>
+                                                    <rect key="frame" x="151" y="92.666666666666671" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="cqJ-ab-Bxy"/>
                                                         <constraint firstAttribute="width" constant="22" id="f5y-S2-EEz"/>
@@ -2110,10 +2110,10 @@
                                                     <state key="normal" image="icDropboxDown"/>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-hC-UYG">
-                                                    <rect key="frame" x="60" y="120.66666666666669" width="60.333333333333343" height="49"/>
+                                                    <rect key="frame" x="60" y="120.66666666666669" width="58.666666666666657" height="49"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vxw-mg-hDP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="11"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="11"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cq1-fO-Cbl">
                                                                     <rect key="frame" x="0.0" y="0.0" width="11" height="11"/>
@@ -2129,7 +2129,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정류장1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeC-8t-XEF">
-                                                                    <rect key="frame" x="26.000000000000004" y="0.0" width="34.333333333333343" height="11"/>
+                                                                    <rect key="frame" x="25.999999999999996" y="0.0" width="32.666666666666657" height="11"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="11" id="H5H-kU-auc"/>
                                                                     </constraints>
@@ -2143,7 +2143,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-LT-EcD">
-                                                            <rect key="frame" x="0.0" y="18.999999999999986" width="60.333333333333336" height="11"/>
+                                                            <rect key="frame" x="0.0" y="18.999999999999986" width="58.666666666666664" height="11"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Iqa-lG-N5U">
                                                                     <rect key="frame" x="0.0" y="0.0" width="11" height="11"/>
@@ -2159,7 +2159,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정류장1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6k-rQ-X6K">
-                                                                    <rect key="frame" x="27.000000000000004" y="0.0" width="33.333333333333343" height="11"/>
+                                                                    <rect key="frame" x="27" y="0.0" width="31.666666666666671" height="11"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="11" id="BOg-vN-unW"/>
                                                                     </constraints>
@@ -2173,7 +2173,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rJi-GT-U5y">
-                                                            <rect key="frame" x="0.0" y="37.999999999999986" width="60.333333333333336" height="11"/>
+                                                            <rect key="frame" x="0.0" y="37.999999999999986" width="58.666666666666664" height="11"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-Bk-dg4">
                                                                     <rect key="frame" x="0.0" y="0.0" width="11" height="11"/>
@@ -2189,7 +2189,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정류장1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-8t-UXv">
-                                                                    <rect key="frame" x="27.000000000000004" y="0.0" width="33.333333333333343" height="11"/>
+                                                                    <rect key="frame" x="27" y="0.0" width="31.666666666666671" height="11"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="11" id="2x9-Ae-s33"/>
                                                                     </constraints>
@@ -2278,10 +2278,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-22-TQp">
-                                                    <rect key="frame" x="84" y="39.333333333333336" width="48" height="26.000000000000007"/>
+                                                    <rect key="frame" x="84" y="39.333333333333336" width="46.333333333333343" height="26.000000000000007"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하차" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXH-yV-Dei">
-                                                            <rect key="frame" x="11" y="3" width="26" height="21"/>
+                                                            <rect key="frame" x="10.999999999999998" y="3" width="24.333333333333329" height="21"/>
                                                             <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="14"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.77647058820000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -2298,7 +2298,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강변역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfP-cj-1Og">
-                                                    <rect key="frame" x="142" y="38.333333333333336" width="44.333333333333343" height="24"/>
+                                                    <rect key="frame" x="140.33333333333334" y="38.333333333333336" width="41.666666666666657" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="Wz3-Ou-DHK"/>
                                                     </constraints>

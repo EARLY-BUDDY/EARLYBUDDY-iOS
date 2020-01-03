@@ -78,7 +78,7 @@
 		C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */; };
 		C591EB3123BE2ABC00F953FB /* checkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3023BE2ABC00F953FB /* checkButton.swift */; };
 		C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3223BE352300F953FB /* NickNameViewController.swift */; };
-		C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */; };
+		C591EB3523BE3C2400F953FB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3423BE3C2400F953FB /* FavoriteViewController.swift */; };
 		C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */; };
 		C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */; };
 		C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */; };
@@ -163,7 +163,7 @@
 		C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		C591EB3023BE2ABC00F953FB /* checkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkButton.swift; sourceTree = "<group>"; };
 		C591EB3223BE352300F953FB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
-		C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
+		C591EB3423BE3C2400F953FB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePopUpViewController.swift; sourceTree = "<group>"; };
 		C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteViewController.swift; sourceTree = "<group>"; };
 		C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndViewController.swift; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 				C591EB2723BE0FB900F953FB /* LoginViewController.swift */,
 				C591EB3223BE352300F953FB /* NickNameViewController.swift */,
 				C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */,
-				C591EB3423BE3C2400F953FB /* FavoriteLocationViewController.swift */,
+				C591EB3423BE3C2400F953FB /* FavoriteViewController.swift */,
 				C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */,
 				C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */,
 			);
@@ -612,7 +612,7 @@
 				52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */,
 				524BB60023B3D4A700B82946 /* BeforeViewController.swift in Sources */,
 				524BB60223B5209D00B82946 /* SearchScheduleViewController.swift in Sources */,
-				C591EB3523BE3C2400F953FB /* FavoriteLocationViewController.swift in Sources */,
+				C591EB3523BE3C2400F953FB /* FavoriteViewController.swift in Sources */,
 				52608B7F23B7B1300086AC3E /* PathCell.swift in Sources */,
 				C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */,
 				52041B0C23BA7ABB00A6E6AB /* SortingPopUpViewController.swift in Sources */,
