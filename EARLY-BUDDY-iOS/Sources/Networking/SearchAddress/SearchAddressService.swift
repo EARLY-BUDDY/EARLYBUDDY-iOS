@@ -25,6 +25,7 @@ struct SearchAddressService {
 //            print("Request: \(response.request)")
 //            print("Response: \(response.response)")
 //            print("Success: \(response.result.isSuccess)")
+//            print("Result: \(response.result)")
 //            print("Response String: \(response.result.value)")
             
             switch response.result {
