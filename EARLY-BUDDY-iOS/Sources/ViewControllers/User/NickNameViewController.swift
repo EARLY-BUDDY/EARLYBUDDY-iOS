@@ -47,7 +47,7 @@ class NickNameViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: Any) {
-        guard let favoriteVC = self.storyboard!.instantiateViewController(withIdentifier: "FavoriteLocationViewController") as? FavoriteLocationViewController else {
+        guard let favoriteVC = self.storyboard!.instantiateViewController(withIdentifier: "FavoriteViewController") as? FavoriteViewController else {
             return }
         favoriteVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(favoriteVC, animated: true)

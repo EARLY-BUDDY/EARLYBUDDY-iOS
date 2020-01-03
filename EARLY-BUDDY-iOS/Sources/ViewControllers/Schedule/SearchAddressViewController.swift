@@ -71,24 +71,24 @@ class SearchAddressViewController: UIViewController {
 extension SearchAddressViewController: UITextFieldDelegate {
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        SearchAddressService.searched.searchAddress(textField.text!) { data in
-            switch data {
-            case .success(let data):
-                let addressResult = data as! SearchAddressResponse
-                
-                addressResult.data?.addresses.forEach { r in
-                    self.results.append(r)
-                }
-                
-                
-            case .requestErr:
-                print("경로를 찾지 못함")
-            }
-        }
-        
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        SearchAddressService.searched.searchAddress(textField.text!) { data in
+//            switch data {
+//            case .success(let data):
+//                let addressResult = data as! SearchAddressResponse
+//
+//                addressResult.data?.addresses.forEach { r in
+//                    self.results.append(r)
+//                }
+//
+//
+//            case .requestErr:
+//                print("경로를 찾지 못함")
+//            }
+//        }
+//
+//        return true
+//    }
 }
 
 extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSource {

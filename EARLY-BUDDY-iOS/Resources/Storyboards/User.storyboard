@@ -353,10 +353,10 @@
             </objects>
             <point key="canvasLocation" x="401" y="-76"/>
         </scene>
-        <!--Favorite Location View Controller-->
+        <!--Favorite View Controller-->
         <scene sceneID="vHp-Ik-fWw">
             <objects>
-                <viewController storyboardIdentifier="FavoriteLocationViewController" id="BeF-bT-zXw" customClass="FavoriteLocationViewController" customModule="EARLY_BUDDY_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" id="BeF-bT-zXw" customClass="FavoriteViewController" customModule="EARLY_BUDDY_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UaJ-bH-OhI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,7 +552,7 @@
                         <outlet property="thirdLocationButton" destination="cjD-fC-x3Y" id="p8K-GO-LkJ"/>
                         <outlet property="thirdLocationLabel" destination="Fil-4R-nfb" id="mBm-xO-3an"/>
                         <outlet property="titleLabel" destination="zGM-tE-RmT" id="lkd-Bc-pjB"/>
-                        <segue destination="Xig-nj-6Lf" kind="replace" identifier="show" splitViewControllerTargetIndex="1" id="3gW-9e-W30"/>
+                        <segue destination="Xig-nj-6Lf" kind="push" identifier="show" splitViewControllerTargetIndex="1" id="3gW-9e-W30"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgb-rr-IfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
