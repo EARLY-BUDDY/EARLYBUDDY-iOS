@@ -29,6 +29,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="backSleep" translatesAutoresizingMaskIntoConstraints="NO" id="gNn-CX-pRG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6z-3O-T8n">
                                 <rect key="frame" x="9" y="44" width="48" height="48"/>
                                 <constraints>
@@ -36,6 +39,9 @@
                                     <constraint firstAttribute="height" constant="48" id="mKY-r0-gTa"/>
                                 </constraints>
                                 <state key="normal" image="calendarIc"/>
+                                <connections>
+                                    <action selector="goToCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n3F-iV-dW3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opo-2F-x5q">
                                 <rect key="frame" x="267" y="44" width="48" height="48"/>
@@ -44,6 +50,9 @@
                                     <constraint firstAttribute="height" constant="48" id="DRF-Fv-Ijx"/>
                                 </constraints>
                                 <state key="normal" image="icMy"/>
+                                <connections>
+                                    <action selector="goMypageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5x-bR-4ur"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFn-Mp-VeP">
                                 <rect key="frame" x="317" y="44" width="48" height="48"/>
@@ -76,36 +85,49 @@
                                     <color key="titleColor" red="0.18823529411764706" green="0.5725490196078431" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaF-3Y-EBx">
-                                <rect key="frame" x="295" y="100" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="찐막 전 뷰"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-2i-Smd">
-                                <rect key="frame" x="290" y="123" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="약속전날 뷰"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRR-wY-zYa">
-                                <rect key="frame" x="273" y="150" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="약속 가는중 뷰"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="M3M-kX-dve">
+                                <rect key="frame" x="273" y="100" width="86" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaF-3Y-EBx">
+                                        <rect key="frame" x="26" y="0.0" width="60" height="30"/>
+                                        <state key="normal" title="찐막 전 뷰"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-2i-Smd">
+                                        <rect key="frame" x="17" y="30" width="69" height="30"/>
+                                        <state key="normal" title="약속전날 뷰"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRR-wY-zYa">
+                                        <rect key="frame" x="0.0" y="60" width="86" height="30"/>
+                                        <state key="normal" title="약속 가는중 뷰"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="WJ1-ym-Fl9"/>
+                                    <constraint firstAttribute="height" constant="90" id="Zie-cB-OQC"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RP7-AX-KFu" secondAttribute="trailing" constant="52" id="1fR-Jc-lqC"/>
+                            <constraint firstItem="gNn-CX-pRG" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="5kZ-sk-g0A"/>
+                            <constraint firstAttribute="top" secondItem="gNn-CX-pRG" secondAttribute="top" id="Eoa-sU-WvE"/>
                             <constraint firstItem="RP7-AX-KFu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="Gdo-N6-lj9"/>
+                            <constraint firstItem="gNn-CX-pRG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Heo-OA-Rj2"/>
+                            <constraint firstItem="M3M-kX-dve" firstAttribute="top" secondItem="Opo-2F-x5q" secondAttribute="bottom" constant="8" id="IG7-tW-DEv"/>
+                            <constraint firstItem="gNn-CX-pRG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQl-4R-hbD"/>
                             <constraint firstItem="NFn-Mp-VeP" firstAttribute="leading" secondItem="Opo-2F-x5q" secondAttribute="trailing" constant="2" id="LkN-m2-UJK"/>
                             <constraint firstItem="v6z-3O-T8n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WyH-RD-RNh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NFn-Mp-VeP" secondAttribute="trailing" constant="10" id="WzD-oQ-Dkh"/>
                             <constraint firstItem="NFn-Mp-VeP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YZd-bj-Fqf"/>
                             <constraint firstItem="vJT-IZ-vux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="aSA-59-wRm"/>
                             <constraint firstItem="vJT-IZ-vux" firstAttribute="top" secondItem="RP7-AX-KFu" secondAttribute="bottom" constant="62" id="bhe-Gz-KVm"/>
+                            <constraint firstAttribute="trailing" secondItem="gNn-CX-pRG" secondAttribute="trailing" id="dhk-KX-cts"/>
                             <constraint firstItem="Opo-2F-x5q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eVf-h9-nNZ"/>
                             <constraint firstItem="RP7-AX-KFu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="ie1-3v-NGr"/>
                             <constraint firstItem="v6z-3O-T8n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="obx-us-kia"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vJT-IZ-vux" secondAttribute="trailing" constant="87" id="qw2-i2-Epd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M3M-kX-dve" secondAttribute="trailing" constant="16" id="trV-S5-Xau"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -114,6 +136,8 @@
                     <connections>
                         <outlet property="addButton" destination="vJT-IZ-vux" id="KxT-WP-Kd8"/>
                         <outlet property="addImageButton" destination="NFn-Mp-VeP" id="sm9-22-bZ1"/>
+                        <outlet property="calendarButton" destination="v6z-3O-T8n" id="Nj4-z5-MJf"/>
+                        <outlet property="mypageButton" destination="Opo-2F-x5q" id="G1g-eM-BQn"/>
                         <outlet property="noneTextView" destination="RP7-AX-KFu" id="ECT-tG-Ioz"/>
                         <outlet property="showViewButton" destination="eaF-3Y-EBx" id="PCb-W7-cCx"/>
                         <outlet property="showViewButton2" destination="VPF-2i-Smd" id="7Vz-Ch-Khr"/>
@@ -571,7 +595,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-yU-5M0">
                                 <rect key="frame" x="20" y="327" width="39" height="18"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2224" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1A-Cj-jh0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2224" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1A-Cj-jh0">
                                         <rect key="frame" x="5" y="0.0" width="29" height="18"/>
                                         <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -580,8 +604,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.77647058823529413" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L1A-Cj-jh0" secondAttribute="trailing" constant="5" id="3mk-v6-SZK"/>
-                                    <constraint firstItem="L1A-Cj-jh0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rqG-yU-5M0" secondAttribute="leading" constant="5" id="CQt-af-Fn6"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="L1A-Cj-jh0" secondAttribute="trailing" constant="5" id="3mk-v6-SZK"/>
+                                    <constraint firstItem="L1A-Cj-jh0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rqG-yU-5M0" secondAttribute="leading" constant="5" id="CQt-af-Fn6"/>
                                     <constraint firstItem="L1A-Cj-jh0" firstAttribute="top" secondItem="rqG-yU-5M0" secondAttribute="top" id="Jgb-Eh-imR"/>
                                     <constraint firstAttribute="height" constant="18" id="coD-5i-3mD"/>
                                     <constraint firstAttribute="width" constant="39" id="h34-nV-UJM"/>
@@ -818,6 +842,7 @@
         <image name="back3" width="375" height="812"/>
         <image name="back4" width="375.33334350585938" height="812.33331298828125"/>
         <image name="backAfter" width="375.33334350585938" height="812"/>
+        <image name="backSleep" width="375" height="812.33331298828125"/>
         <image name="calendarIc" width="48" height="48"/>
         <image name="icLocation" width="12.333333015441895" height="15.333333015441895"/>
         <image name="icMy" width="48" height="48"/>

@@ -33,6 +33,10 @@ class FavoriteLocationViewController: UIViewController {
         customNavigationBar()
     }
     
+    @IBAction func goBackAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func customNavigationBar() {
         self.view.layer.backgroundColor = UIColor.white.cgColor
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -62,14 +66,8 @@ extension FavoriteLocationViewController: UITableViewDelegate, UITableViewDataSo
         cell.favoriteIconImageButton.setImage(self.buttons[indexPath.row].image(for: .normal), for: .normal)
         cell.favoriteLocationLabel.text = self.labels[indexPath.row].text
         
-        if (cell.favoriteIconImageButton.currentImage?.isEqual(homeImage))! {
+        if indexPath.row == 0 {
             cell.favoriteNameLabel.text = "집"
-        } else if cell.favoriteIconImageButton.currentImage == companyImage {
-            cell.favoriteNameLabel.text = "회사"
-        } else if cell.favoriteIconImageButton.currentImage == schoolImage {
-            cell.favoriteNameLabel.text = "학교"
-        } else if cell.favoriteIconImageButton.currentImage == etcImage {
-            cell.favoriteNameLabel.text = "기타"
         } else {
             cell.favoriteNameLabel.text = ""
         }

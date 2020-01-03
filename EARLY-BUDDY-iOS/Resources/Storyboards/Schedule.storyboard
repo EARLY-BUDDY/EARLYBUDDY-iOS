@@ -674,7 +674,7 @@
                                         <rect key="frame" x="18" y="95" width="339" height="683"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpj-in-QFs">
-                                                <rect key="frame" x="23.666666666666657" y="1" width="292" height="639"/>
+                                                <rect key="frame" x="23.666666666666657" y="0.0" width="292" height="640"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyf-Gp-Rbv">
                                                         <rect key="frame" x="0.0" y="0.0" width="292" height="752"/>
@@ -1128,7 +1128,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Jpj-in-QFs" secondAttribute="bottom" constant="43" id="6EI-7x-ysy"/>
-                                            <constraint firstItem="Jpj-in-QFs" firstAttribute="top" secondItem="dJK-88-KN4" secondAttribute="top" constant="1" id="PiX-iV-eR2"/>
+                                            <constraint firstItem="Jpj-in-QFs" firstAttribute="top" secondItem="dJK-88-KN4" secondAttribute="top" id="PiX-iV-eR2"/>
                                             <constraint firstItem="Jpj-in-QFs" firstAttribute="leading" secondItem="dJK-88-KN4" secondAttribute="leading" constant="23.5" id="YlN-0G-8sp"/>
                                             <constraint firstAttribute="trailing" secondItem="Jpj-in-QFs" secondAttribute="trailing" constant="23.5" id="eFb-ao-GCb"/>
                                         </constraints>
@@ -2959,6 +2959,9 @@
                                 <state key="normal" title="완료">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBackAction:" destination="Klz-h0-6DT" eventType="touchUpInside" id="KeU-ww-n1B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
