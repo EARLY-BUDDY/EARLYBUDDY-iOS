@@ -74,6 +74,23 @@
 		52FAC5B923BF38DF00A3FA9B /* SearchPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5B823BF38DF00A3FA9B /* SearchPopUpViewController.swift */; };
 		52FAC5BB23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5BA23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift */; };
 		52FAC5BD23BF4FA700A3FA9B /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5BC23BF4FA700A3FA9B /* BusStopView.swift */; };
+		C591EB1C23BE0E0400F953FB /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1A23BE0E0400F953FB /* Calendar.storyboard */; };
+		C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1B23BE0E0400F953FB /* User.storyboard */; };
+		C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2323BE0F9500F953FB /* SignUpViewController.swift */; };
+		C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */; };
+		C591EB2823BE0FB900F953FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2723BE0FB900F953FB /* LoginViewController.swift */; };
+		C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2A23BE102100F953FB /* RoundBorderView.swift */; };
+		C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2C23BE106B00F953FB /* String+Extension.swift */; };
+		C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */; };
+		C591EB3123BE2ABC00F953FB /* checkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3023BE2ABC00F953FB /* checkButton.swift */; };
+		C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3223BE352300F953FB /* NickNameViewController.swift */; };
+		C591EB3523BE3C2400F953FB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3423BE3C2400F953FB /* FavoriteViewController.swift */; };
+		C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */; };
+		C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */; };
+		C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */; };
+		C591EB3E23BF5AA200F953FB /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3D23BF5AA200F953FB /* UsersService.swift */; };
+		C591EB4123BF5D8A00F953FB /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */; };
+		C591EB4323BF655900F953FB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB4223BF655900F953FB /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +165,23 @@
 		63934CFA3C66175262122920 /* Pods-EARLY-BUDDY-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.debug.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EARLY_BUDDY_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.release.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C591EB1A23BE0E0400F953FB /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		C591EB1B23BE0E0400F953FB /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		C591EB2323BE0F9500F953FB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
+		C591EB2723BE0FB900F953FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C591EB2A23BE102100F953FB /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
+		C591EB2C23BE106B00F953FB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		C591EB3023BE2ABC00F953FB /* checkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkButton.swift; sourceTree = "<group>"; };
+		C591EB3223BE352300F953FB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
+		C591EB3423BE3C2400F953FB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePopUpViewController.swift; sourceTree = "<group>"; };
+		C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteViewController.swift; sourceTree = "<group>"; };
+		C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndViewController.swift; sourceTree = "<group>"; };
+		C591EB3D23BF5AA200F953FB /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C591EB4223BF655900F953FB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,10 +301,10 @@
 		52CCE39923AFB60A00964D05 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB2923BE101600F953FB /* View */,
 				52608B7B23B7A56E0086AC3E /* Cells */,
 				52CCE39F23AFB6EA00964D05 /* Extensions */,
 				52CCE39E23AFB6E600964D05 /* Networking */,
-				52CCE39D23AFB6DD00964D05 /* Model */,
 				52CCE39B23AFB62200964D05 /* ViewControllers */,
 			);
 			path = Sources;
@@ -290,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				52FAC5B523BF1FB500A3FA9B /* LaunchScreen */,
+				C591EB2223BE0F8000F953FB /* User */,
 				524BB5F223B3771400B82946 /* Schedule */,
 				52CCE3A823B2143F00964D05 /* Main */,
 			);
@@ -299,6 +334,8 @@
 		52CCE39C23AFB63400964D05 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB1A23BE0E0400F953FB /* Calendar.storyboard */,
+				C591EB1B23BE0E0400F953FB /* User.storyboard */,
 				52CCE39023AFB5F900964D05 /* LaunchScreen.storyboard */,
 				52CCE38B23AFB5F600964D05 /* Main.storyboard */,
 				524BB5F323B3772B00B82946 /* Schedule.storyboard */,
@@ -309,6 +346,7 @@
 		52CCE39D23AFB6DD00964D05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB3F23BF5CA200F953FB /* User */,
 				52AD2F3523BE227D00706B0B /* SearchAddress */,
 				52EAC2D923BD087D00529CFE /* SearchPath */,
 				52608B8023B7C5060086AC3E /* Path */,
@@ -319,10 +357,12 @@
 		52CCE39E23AFB6E600964D05 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C591EB3C23BF5A7C00F953FB /* Users */,
 				52AD2F3223BE226100706B0B /* SearchAddress */,
 				52EAC2DC23BD0D6F00529CFE /* SearchPath */,
 				52EAC2D523BD06E800529CFE /* NetworkResult.swift */,
 				52EAC2D723BD079100529CFE /* APIConstants.swift */,
+				52CCE39D23AFB6DD00964D05 /* Model */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -335,6 +375,8 @@
 				524BB5FB23B3BDA600B82946 /* Kerning.swift */,
 				524EC24E23B5E94F00A3CF0C /* UIView+Extension.swift */,
 				524EC25223B6068D00A3CF0C /* Shadow.swift */,
+				C591EB2C23BE106B00F953FB /* String+Extension.swift */,
+				C591EB2E23BE108A00F953FB /* UIViewController+Extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +449,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C591EB2223BE0F8000F953FB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB2323BE0F9500F953FB /* SignUpViewController.swift */,
+				C591EB2523BE0FA600F953FB /* SignUpCompleteViewController.swift */,
+				C591EB2723BE0FB900F953FB /* LoginViewController.swift */,
+				C591EB3223BE352300F953FB /* NickNameViewController.swift */,
+				C591EB3823BE6F7A00F953FB /* SearchFavoriteViewController.swift */,
+				C591EB3423BE3C2400F953FB /* FavoriteViewController.swift */,
+				C591EB3623BE421700F953FB /* FavoritePopUpViewController.swift */,
+				C591EB3A23BEA54100F953FB /* LoginEndViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C591EB2923BE101600F953FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB2A23BE102100F953FB /* RoundBorderView.swift */,
+				C591EB3023BE2ABC00F953FB /* checkButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C591EB3C23BF5A7C00F953FB /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB3D23BF5AA200F953FB /* UsersService.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		C591EB3F23BF5CA200F953FB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */,
+				C591EB4223BF655900F953FB /* LoginResponse.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,10 +550,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C591EB1C23BE0E0400F953FB /* Calendar.storyboard in Resources */,
 				52CCE3B023B2229300964D05 /* NotoSansKR-Medium.otf in Resources */,
 				52CCE3B323B2229300964D05 /* NotoSansKR-Thin.otf in Resources */,
 				52CCE3C923B222B600964D05 /* Roboto-Thin.ttf in Resources */,
 				52CCE3C723B222B600964D05 /* Roboto-Black.ttf in Resources */,
+				C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */,
 				52CCE3CD23B222B600964D05 /* Roboto-Italic.ttf in Resources */,
 				524BB5F423B3772B00B82946 /* Schedule.storyboard in Resources */,
 				52CCE3C223B222B600964D05 /* Roboto-LightItalic.ttf in Resources */,
@@ -543,16 +628,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C591EB2823BE0FB900F953FB /* LoginViewController.swift in Sources */,
 				52608B8C23B91E5C0086AC3E /* ClickCell.swift in Sources */,
 				52FAC5B723BF1FC600A3FA9B /* LaunchScreenViewController.swift in Sources */,
+				C591EB2B23BE102100F953FB /* RoundBorderView.swift in Sources */,
 				524BB5F823B3B1F500B82946 /* NowViewController.swift in Sources */,
 				52041B0A23BA7AB000A6E6AB /* PreferPopUpViewController.swift in Sources */,
+				C591EB3E23BF5AA200F953FB /* UsersService.swift in Sources */,
 				524BB5F623B377E600B82946 /* MainScheduleViewController.swift in Sources */,
+				C591EB2F23BE108A00F953FB /* UIViewController+Extention.swift in Sources */,
 				52608B7D23B7A6CE0086AC3E /* LineCell.swift in Sources */,
 				52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */,
 				524BB60023B3D4A700B82946 /* BeforeViewController.swift in Sources */,
 				524BB60223B5209D00B82946 /* SearchScheduleViewController.swift in Sources */,
+				C591EB3523BE3C2400F953FB /* FavoriteViewController.swift in Sources */,
 				52608B7F23B7B1300086AC3E /* PathCell.swift in Sources */,
+				C591EB3923BE6F7A00F953FB /* SearchFavoriteViewController.swift in Sources */,
 				52041B0C23BA7ABB00A6E6AB /* SortingPopUpViewController.swift in Sources */,
 				52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */,
 				52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */,
@@ -563,19 +654,28 @@
 				524EC24F23B5E94F00A3CF0C /* UIView+Extension.swift in Sources */,
 				524BB5F123B331A900B82946 /* UIButton+Extension.swift in Sources */,
 				52608B8823B9116D0086AC3E /* DetailPath.swift in Sources */,
+				C591EB3323BE352300F953FB /* NickNameViewController.swift in Sources */,
 				524EC25123B5F3C700A3CF0C /* PopUpViewController.swift in Sources */,
 				52608B8623B901DF0086AC3E /* ShowPathDetailViewController.swift in Sources */,
+				C591EB3123BE2ABC00F953FB /* checkButton.swift in Sources */,
 				52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */,
+				C591EB2D23BE106B00F953FB /* String+Extension.swift in Sources */,
 				52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */,
 				52EAC2D223BC830000529CFE /* NoScheduleViewController.swift in Sources */,
+				C591EB4323BF655900F953FB /* LoginResponse.swift in Sources */,
+				C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */,
 				524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */,
 				52AD2F3423BE226D00706B0B /* SearchAddressService.swift in Sources */,
 				52FAC5B923BF38DF00A3FA9B /* SearchPopUpViewController.swift in Sources */,
 				524BB5EF23B3318800B82946 /* UIColor+Extension.swift in Sources */,
 				52608B7A23B74C5B0086AC3E /* SelectPathViewController.swift in Sources */,
+				C591EB4123BF5D8A00F953FB /* SignUpResponse.swift in Sources */,
 				52AD2F3923BE2EE700706B0B /* SearchAddressViewController.swift in Sources */,
 				52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */,
+				C591EB3B23BEA54200F953FB /* LoginEndViewController.swift in Sources */,
+				C591EB2623BE0FA600F953FB /* SignUpCompleteViewController.swift in Sources */,
 				52EAC2D623BD06E800529CFE /* NetworkResult.swift in Sources */,
+				C591EB3723BE421700F953FB /* FavoritePopUpViewController.swift in Sources */,
 				52608B8423B807E20086AC3E /* CircleCell.swift in Sources */,
 				52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */,
 				52FAC5BD23BF4FA700A3FA9B /* BusStopView.swift in Sources */,

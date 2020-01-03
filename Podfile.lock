@@ -1,27 +1,27 @@
 PODS:
   - Alamofire (4.9.1)
-  - Hero (1.5.0)
   - lottie-ios (3.1.5)
   - SnapKit (5.0.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - Hero
   - lottie-ios
   - SnapKit (~> 5.0.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Hero
     - lottie-ios
     - SnapKit
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: 9fef421e658dcd34a90d4f4f1d758e980af5041c
 

@@ -2261,6 +2261,15 @@
                                                     <color key="textColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14개 정류장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-tr-zX4">
+                                                    <rect key="frame" x="84.666666666666671" y="92.666666666666671" width="58.333333333333329" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="7bg-zW-zRQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="12"/>
+                                                    <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MD5-hl-p4J">
                                                     <rect key="frame" x="84" y="15.666666666666664" width="48" height="26"/>
                                                     <subviews>
