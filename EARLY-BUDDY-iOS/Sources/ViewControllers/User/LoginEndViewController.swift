@@ -21,8 +21,6 @@ class LoginEndViewController: UIViewController {
         setInit()
     }
     
-    
-    
     func setInit(){
         let imageView : UIImageView = UIImageView(image: UIImage(named: "backFirstFinsh.png")!)
         self.view.addSubview(imageView)

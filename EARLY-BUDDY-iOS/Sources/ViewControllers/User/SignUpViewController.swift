@@ -62,6 +62,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 //        signUpButton.isEnabled = false
     }
     
+    func signupNetwork() {
+        let id = gsno(idTextField.text)
+        let passwd = gsno(passwdTextField.text)
+        var resultData: SignUpResponse!
+        UsersService.usersService.signupNetwork(id, passwd) { data in
+            switch data {
+            case .success(let data):
+                print(" signupNetwork data : ",data)
+                resultData = data as? SignUpResponse
+                print("resultData : ", resultData)
+            case .requestErr:
+                print("경로를 찾지 못함")
+            }
+        }
+    }
+    
     @IBAction func SignUpButtonAction(_ sender: Any) {
         let sub = UIView(frame: self.view.frame)
         sub.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
@@ -73,7 +89,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         myAlert.onFinished = { [weak self] in
             self?.goLoginView()
         }
-        self.present(myAlert, animated: true, completion: nil)
+        signupNetwork()
+//        if signupNetwork() {
+            self.present(myAlert, animated: true, completion: nil)
+//        } else {
+//            print("xxxxxxxx")
+//        }
     }
     
     func goLoginView(){
