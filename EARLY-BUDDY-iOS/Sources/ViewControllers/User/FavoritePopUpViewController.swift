@@ -65,16 +65,15 @@ class FavoritePopUpViewController: UIViewController {
     }
     
     @IBAction func selectButtonAction(_ sender: Any) {
-        print(selectIdx)
         let defaults = UserDefaults.standard
         var names = defaults.stringArray(forKey: "favoriteIconNames") ?? [String]()
+        
         for index in 0 ... buttons.count - 1 {
-            print(index)
             if buttons[index] == selectedButton && selectIdx != 5 {
-//                names[selectIdx] = buttonName[index]
+                names[selectIdx] = buttonName[index]
             }
         }
-//        let locationVC = self.storyboard?.instantiateViewController(withIdentifier: "FavoriteLocationViewController") as! FavoriteLocationViewController
+        defaults.set(names, forKey: "favoriteIconNames")
         self.dismiss(animated: true)
         onFinished?()
         
@@ -84,6 +83,7 @@ class FavoritePopUpViewController: UIViewController {
         for btn in buttons {
             if ( btn == sender ){
                 sender.isChecked = true
+                selectedButton = sender
             } else {
                 btn.isChecked = false
             }
