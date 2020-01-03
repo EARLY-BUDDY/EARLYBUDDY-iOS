@@ -19,6 +19,10 @@ class SearchScheduleViewController: UIViewController {
         customNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "장소 선택"
+    }
+    
     @IBAction func goStartSearch(_ sender: UIButton) {
         guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SearchAddressViewController") as? SearchAddressViewController else { return }
         nextVC.startArrive = "출발 : "

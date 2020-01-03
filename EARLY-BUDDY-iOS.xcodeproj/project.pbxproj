@@ -36,6 +36,8 @@
 		52AD2F3723BE228B00706B0B /* SearchAddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3623BE228B00706B0B /* SearchAddressResponse.swift */; };
 		52AD2F3923BE2EE700706B0B /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */; };
 		52AD2F3F23BE351300706B0B /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F3E23BE351300706B0B /* AddressCell.swift */; };
+		52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */; };
+		52AD2F4323BE7AB900706B0B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */; };
 		52C2F12823B22F5500C2BD75 /* NoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2F12723B22F5500C2BD75 /* NoneViewController.swift */; };
 		52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38523AFB5F600964D05 /* AppDelegate.swift */; };
 		52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCE38723AFB5F600964D05 /* SceneDelegate.swift */; };
@@ -114,6 +116,8 @@
 		52AD2F3623BE228B00706B0B /* SearchAddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressResponse.swift; sourceTree = "<group>"; };
 		52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
 		52AD2F3E23BE351300706B0B /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationViewController.swift; sourceTree = "<group>"; };
+		52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		52C2F12723B22F5500C2BD75 /* NoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneViewController.swift; sourceTree = "<group>"; };
 		52CCE38223AFB5F600964D05 /* EARLY-BUDDY-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BUDDY-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CCE38523AFB5F600964D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				52EAC2D123BC830000529CFE /* NoScheduleViewController.swift */,
 				52EAC2D323BC856C00529CFE /* DetailScheduleViewController.swift */,
 				52AD2F3823BE2EE700706B0B /* SearchAddressViewController.swift */,
+				52AD2F4023BE7A8F00706B0B /* FavoriteLocationViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				52608B8D23B93A9F0086AC3E /* WalkCell.swift */,
 				52608B8F23B93AFD0086AC3E /* ArriveCell.swift */,
 				52AD2F3E23BE351300706B0B /* AddressCell.swift */,
+				52AD2F4223BE7AB900706B0B /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -615,6 +621,7 @@
 				52AD2F3723BE228B00706B0B /* SearchAddressResponse.swift in Sources */,
 				524BB5FE23B3CC0400B82946 /* GoingViewController.swift in Sources */,
 				52CCE38623AFB5F600964D05 /* AppDelegate.swift in Sources */,
+				52AD2F4323BE7AB900706B0B /* FavoriteCell.swift in Sources */,
 				524EC24F23B5E94F00A3CF0C /* UIView+Extension.swift in Sources */,
 				524BB5F123B331A900B82946 /* UIButton+Extension.swift in Sources */,
 				52608B8823B9116D0086AC3E /* DetailPath.swift in Sources */,
@@ -642,6 +649,7 @@
 				52608B8423B807E20086AC3E /* CircleCell.swift in Sources */,
 				52608B9023B93AFD0086AC3E /* ArriveCell.swift in Sources */,
 				52608B8E23B93A9F0086AC3E /* WalkCell.swift in Sources */,
+				52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */,
 				524BB5FC23B3BDA600B82946 /* Kerning.swift in Sources */,
 				52EAC2D423BC856C00529CFE /* DetailScheduleViewController.swift in Sources */,
 				52608B8223B7C5300086AC3E /* Path.swift in Sources */,

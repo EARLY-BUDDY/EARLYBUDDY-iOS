@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SortDataDelegate {
+    func sortData(data: String)
+}
+
 class SortingPopUpViewController: UIViewController {
 
     @IBOutlet var popUpView: UIView!
@@ -21,6 +25,8 @@ class SortingPopUpViewController: UIViewController {
     @IBOutlet var walkLabel: UIButton!
     @IBOutlet var walkCheckImg: UIImageView!
     @IBOutlet var confirmButton: UIButton!
+    
+    var delegate: SortDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,7 @@ class SortingPopUpViewController: UIViewController {
         self.timeCheckImg.isHidden = true
         self.transferCheckImg.isHidden = true
         self.walkCheckImg.isHidden = true
+        
     }
     
     @IBAction func timeCheckAction(_ sender: UIButton) {
@@ -59,6 +66,7 @@ class SortingPopUpViewController: UIViewController {
         self.timeCheckImg.isHidden = false
         self.transferCheckImg.isHidden = true
         self.walkCheckImg.isHidden = true
+        
     }
     
     @IBAction func transferCheckAction(_ sender: UIButton) {
@@ -71,6 +79,7 @@ class SortingPopUpViewController: UIViewController {
         self.timeCheckImg.isHidden = true
         self.transferCheckImg.isHidden = false
         self.walkCheckImg.isHidden = true
+        
     }
     
     @IBAction func walkCheckAction(_ sender: UIButton) {
@@ -86,7 +95,27 @@ class SortingPopUpViewController: UIViewController {
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        if !routeCheckImg.isHidden {
+            if let data = routeLabel.titleLabel?.text {
+                delegate?.sortData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        } else if !timeCheckImg.isHidden {
+            if let data = timeLabel.titleLabel?.text {
+                delegate?.sortData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        } else if !transferCheckImg.isHidden {
+            if let data = transferLabel.titleLabel?.text {
+                delegate?.sortData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        } else {
+            if let data = walkLabel.titleLabel?.text {
+                delegate?.sortData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
 }

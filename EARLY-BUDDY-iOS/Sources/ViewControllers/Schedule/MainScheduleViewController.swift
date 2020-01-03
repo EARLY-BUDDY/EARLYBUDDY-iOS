@@ -361,9 +361,18 @@ class MainScheduleViewController: UIViewController {
         let myAlert = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "DetailScheduleViewController") as? DetailScheduleViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        
         myAlert.onFinished = { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
+        
+        myAlert.onComplete = { [weak self] in
+            self?.navigationController?.pushViewController(nextVC, animated: true)
+        }
+        
         self.present(myAlert, animated: true, completion: nil)
     }
     
