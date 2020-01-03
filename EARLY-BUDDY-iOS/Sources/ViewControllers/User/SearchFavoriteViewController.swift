@@ -17,11 +17,13 @@ class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
     
     var selectedIdx: Int?
     var resultAddr: String = ""
-    var results: [Address] = []
+    var results: [SearchAddressResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let idx = selectedIdx else { return }
+        searchAddressTV.delegate = self
+        searchAddressTV.dataSource = self
         let defaults = UserDefaults.standard
         let names = defaults.stringArray(forKey: "favoriteIconNames") ?? [String]()
         if names[idx] == "icHomeSelectedBig" {
@@ -35,15 +37,15 @@ class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
         }
         searchContainerView.roundCorners(corners: [.allCorners], radius: 19)
         searchTextField.delegate = self
-        searchAddressTV.delegate = self
-        searchAddressTV.dataSource = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        self.view.addGestureRecognizer(tap)
-    }
 
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
+        searchAddressTV.allowsSelection = true
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        }
+
+    
     
     @IBAction func backAction(_ sender: Any) {
         let defaults = UserDefaults.standard
@@ -55,21 +57,21 @@ class SearchFavoriteViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension SearchFavoriteViewController {
-
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        let address = textField.text!
-//        SearchAddressService.shared.searchAddress(address) { data in
-//            switch data {
-//            case .success(let data):
-//                let addressResult = data as! SearchAddressResponse
-////                addressResult.data.forEach { r in
-////                    self.results.append(r)
-//                }
-//            case .requestErr:
-//                print("경로를 찾지 못함")
-//            }
-//        }
-//    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let address = textField.text!
+        SearchAddressService.shared.searchAddress(address) { data in
+            switch data {
+            case .success(let data):
+                let addressResult = data as? [SearchAddressResponse]
+                self.results = addressResult ?? []
+                self.searchAddressTV.reloadData()
+            case .requestErr:
+                print("err")
+            }
+        }
+    }
+    
 }
 
 extension SearchFavoriteViewController: UITableViewDelegate, UITableViewDataSource {
@@ -79,12 +81,19 @@ extension SearchFavoriteViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
-        
-//        cell.placeName.text = results[indexPath.row].placeName
-//        cell.addressName.text = results[indexPath.row].addressName
-//        cell.roadAddressName.text = results[indexPath.row].roadAddressName
+    
+        cell.placeName.text = gsno(results[indexPath.row].placeName)
+        cell.addressName.text = gsno(results[indexPath.row].addressName)
+        cell.roadAddressName.text = gsno(results[indexPath.row].roadAddressName)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
+        print(cell.placeName?.text)
+        searchTextField.text = cell.placeName?.text
+        searchTextField.text = cell.addressName?.text
     }
 }
 

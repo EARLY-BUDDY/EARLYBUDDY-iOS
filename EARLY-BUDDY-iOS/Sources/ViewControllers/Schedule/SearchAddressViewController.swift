@@ -32,7 +32,7 @@ class SearchAddressViewController: UIViewController {
     
     var startArrive: String = ""
     var resultAddr: String = ""
-    var results: [Location] = []
+    var results: [SearchAddressResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,23 +100,22 @@ class SearchAddressViewController: UIViewController {
 }
 
 extension SearchAddressViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        SearchAddressService.searched.searchAddress(textField.text!) { data in
+        let address = textField.text!
+        SearchAddressService.shared.searchAddress(address) { data in
             switch data {
             case .success(let data):
-                let addressResult = data as! SearchAddressResponse
-                addressResult.data?.addresses.forEach { r in
-                    self.results.append(r)
-                    print("\(r)-----")
-                }
+                let addressResult = data as? [SearchAddressResponse]
+                self.results = addressResult ?? []
+                self.searchAddressTV.reloadData()
             case .requestErr:
-                print("경로를 찾지 못함")
+                print("err")
             }
         }
-        
         return true
     }
-}
+} 
 
 extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -126,12 +125,12 @@ extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
         
-        if results[indexPath.row].placeName != nil && results[indexPath.row].roadAddressName != nil {
-            cell.placeName.text = results[indexPath.row].placeName
+        if results[indexPath.row].x != nil && results[indexPath.row].roadAddressName != nil {
+//            cell.placeName.text = results[indexPath.row].x
             cell.addressName.text = results[indexPath.row].addressName
             cell.roadAddressName.text = results[indexPath.row].roadAddressName
-        } else if results[indexPath.row].placeName != nil && results[indexPath.row].roadAddressName == nil {
-            cell.placeName.text = results[indexPath.row].placeName
+        } else if results[indexPath.row].x != nil && results[indexPath.row].roadAddressName == nil {
+//            cell.placeName.text = results[indexPath.row].x
             cell.addressName.text = results[indexPath.row].addressName
             cell.roadAddressName.text = ""
         } else {
