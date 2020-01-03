@@ -8,25 +8,22 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 struct SearchAddressService {
-    static let searched = SearchAddressService()
+    static let shared = SearchAddressService()
     
     func searchAddress(_ addr: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
         ]
+        let param: Parameters = [
+            "addr" : addr
+        ]
+        let searchAddrURL = APIConstants.SearchAddressURL
         
-        let searchAddrURL = APIConstants.SearchAddressURL + "addr=" + addr
-        
-        Alamofire.request(searchAddrURL, method: .get, parameters: .none, encoding: JSONEncoding.default, headers: header).responseData { response in
-            
-//            print("Request: \(response.request)")
-//            print("Response: \(response.response)")
-//            print("Success: \(response.result.isSuccess)")
-//            print("Response String: \(response.result.value)")
-            
+        Alamofire.request(searchAddrURL, method: .get, parameters: param, encoding: URLEncoding.queryString, headers: header).responseData { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {
@@ -34,16 +31,19 @@ struct SearchAddressService {
                         switch status {
                         case 200:
                             do {
-                                let decoder = JSONDecoder()
-                                print("value", value)
-                                let result = try decoder.decode(SearchPathResponse.self, from: value)
-                                
-                                switch result.success {
-                                case true:
-                                    print("Networking Success")
+                                let data = response.data
+                                var jsonString = JSON(data as Any).description
+                                if jsonString ==  "null" {
+                                    jsonString = "{}"
+                                }
+                                let jsonData = jsonString.data(using: .utf8) ?? Data()
+                                do {
+                                    let result = try JSONDecoder().decode(ResponseArray<SearchAddressResponse>.self, from: jsonData)
                                     completion(.success(result.data!))
-                                case false:
+                                    print("result. : ", result)
+                                } catch let catchError{
                                     completion(.requestErr)
+                                    print("캐치에러 \(catchError)")
                                 }
                             }
                             catch {

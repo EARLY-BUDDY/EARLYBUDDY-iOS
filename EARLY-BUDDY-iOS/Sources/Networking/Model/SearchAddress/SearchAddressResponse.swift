@@ -10,16 +10,26 @@ import Foundation
 import Alamofire
 
 struct SearchAddressResponse: Codable {
-    let success: Bool
-    let message: String
-    let data: Address?
-}
-
-struct Address: Codable {
-    let addresses: [Location]
-}
-
-struct Location: Codable {
-    let addressName: String
-    let roadAddressName, placeName: String?
+    let placeName: String?
+    let addressName: String?
+    let roadAddressName: String?
+    let x: String?
+    let y: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case placeName = "placeName"
+        case addressName = "addressName"
+        case roadAddressName = "roadAddressName"
+        case x = "x"
+        case y = "y"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        placeName = try values.decodeIfPresent(String.self, forKey: .placeName)
+        addressName = try values.decodeIfPresent(String.self, forKey: .addressName)
+        roadAddressName = try values.decodeIfPresent(String.self, forKey: .roadAddressName)
+        x = try values.decodeIfPresent(String.self, forKey: .x)!
+        y = try values.decodeIfPresent(String.self, forKey: .y)!
+    }
 }

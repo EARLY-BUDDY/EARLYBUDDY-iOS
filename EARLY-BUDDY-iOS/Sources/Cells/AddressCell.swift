@@ -16,7 +16,7 @@ class AddressCell: UITableViewCell {
     @IBOutlet var roadAddressName: UILabel!
     
     override func awakeFromNib() {
-        self.roadNameView.layer.cornerRadius = 12
+        self.roadNameView.layer.cornerRadius = 10
         self.roadNameView.layer.borderWidth = 1
         self.roadNameView.layer.borderColor = UIColor.darkgray.cgColor
     }

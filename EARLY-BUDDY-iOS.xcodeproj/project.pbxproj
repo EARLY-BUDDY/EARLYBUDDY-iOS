@@ -70,6 +70,7 @@
 		52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */; };
 		C51F76C923BFDCB4009C7D15 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51F76C823BFDCB4009C7D15 /* Splash.storyboard */; };
 		C56A61F123BFF07700A1AA82 /* splashJson.json in Resources */ = {isa = PBXBuildFile; fileRef = C56A61F023BFF07700A1AA82 /* splashJson.json */; };
+		C56A61F323BFFCC800A1AA82 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A61F223BFFCC800A1AA82 /* ResponseArray.swift */; };
 		C591EB1C23BE0E0400F953FB /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1A23BE0E0400F953FB /* Calendar.storyboard */; };
 		C591EB1D23BE0E0400F953FB /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C591EB1B23BE0E0400F953FB /* User.storyboard */; };
 		C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB2323BE0F9500F953FB /* SignUpViewController.swift */; };
@@ -158,6 +159,7 @@
 		C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.release.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C51F76C823BFDCB4009C7D15 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		C56A61F023BFF07700A1AA82 /* splashJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashJson.json; sourceTree = "<group>"; };
+		C56A61F223BFFCC800A1AA82 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		C591EB1A23BE0E0400F953FB /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		C591EB1B23BE0E0400F953FB /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		C591EB2323BE0F9500F953FB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				52AD2F3523BE227D00706B0B /* SearchAddress */,
 				52EAC2D923BD087D00529CFE /* SearchPath */,
 				52608B8023B7C5060086AC3E /* Path */,
+				C56A61F223BFFCC800A1AA82 /* ResponseArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				52CCE38823AFB5F600964D05 /* SceneDelegate.swift in Sources */,
 				52EAC2D223BC830000529CFE /* NoScheduleViewController.swift in Sources */,
 				C591EB4323BF655900F953FB /* LoginResponse.swift in Sources */,
+				C56A61F323BFFCC800A1AA82 /* ResponseArray.swift in Sources */,
 				C591EB2423BE0F9500F953FB /* SignUpViewController.swift in Sources */,
 				524EC25323B6068D00A3CF0C /* Shadow.swift in Sources */,
 				52AD2F3423BE226D00706B0B /* SearchAddressService.swift in Sources */,
