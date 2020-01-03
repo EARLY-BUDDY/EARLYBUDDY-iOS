@@ -24,13 +24,8 @@ class ClickCell: UITableViewCell {
     @IBOutlet var stationName: UILabel!
     @IBOutlet var mapButton: UIButton!
     @IBOutlet var moreInfoButton: UIButton!
-    @IBOutlet var stationLabel: UILabel!
-    @IBOutlet var stationCircleView: UIView!
-    @IBOutlet var stationLabel2: UILabel!
-    @IBOutlet var stationLabel3: UILabel!
-    @IBOutlet var thirdView: UIStackView!
-    @IBOutlet var secondView: UIStackView!
-    @IBOutlet var firstView: UIStackView!
+    @IBOutlet var busStopStackView: UIStackView!
+    
     
     var delegate: DownupDelegate?
     
@@ -49,13 +44,14 @@ class ClickCell: UITableViewCell {
     }
     
     @objc func downup() {
-        stationLabel.isHidden.toggle()
-        firstView.isHidden.toggle()
-        stationLabel2.isHidden.toggle()
-        secondView.isHidden.toggle()
-        stationLabel3.isHidden.toggle()
-        thirdView.isHidden.toggle()
+        toggleStackViewSubviews()
         delegate?.didDownup()
     }
     
+    func toggleStackViewSubviews() {
+        for (i, v) in busStopStackView.subviews.enumerated() {
+            if i == 0 { continue }
+            v.isHidden.toggle()
+        }
+    }
 }

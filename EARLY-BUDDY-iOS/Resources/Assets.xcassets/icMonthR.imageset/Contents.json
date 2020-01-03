@@ -1,18 +1,18 @@
 {
   "images" : [
     {
+      "filename" : "icMonthR.png",
       "idiom" : "universal",
-      "filename" : "imgBlankNoPlan.png",
       "scale" : "1x"
     },
     {
-      "scale" : "2x",
-      "filename" : "imgBlankNoPlan@2x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icMonthR@2x.png",
+      "scale" : "2x"
     },
     {
-      "filename" : "imgBlankNoPlan@3x.png",
       "idiom" : "universal",
+      "filename" : "icMonthR@3x.png",
       "scale" : "3x"
     }
   ],

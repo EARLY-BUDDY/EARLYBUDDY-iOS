@@ -2,16 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "backSleep.png"
+      "filename" : "icPlus2.png",
+      "scale" : "1x"
     },
     {
-      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "backSleep@2x.png"
+      "filename" : "icPlus2@2x.png",
+      "idiom" : "universal"
     },
     {
-      "filename" : "backSleep@3x.png",
+      "filename" : "icPlus2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

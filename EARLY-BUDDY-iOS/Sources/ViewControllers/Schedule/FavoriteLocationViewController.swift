@@ -10,10 +10,31 @@ import UIKit
 
 class FavoriteLocationViewController: UIViewController {
 
+    @IBOutlet var favoriteTV: UITableView!
+    @IBOutlet var confimeButton: UIButton!
+    
+    let homeImage = UIImage(named: "icHomeSelectedSmall")
+    let companyImage = UIImage(named: "icCompanySelectedSmall")
+    let schoolImage = UIImage(named: "icSchoolSelectedSmall")
+    let etcImage = UIImage(named: "icEtcSelectedSmall")
+    let addImage = UIImage(named: "icLocationPlusSmall")
+    
+    var buttons: [UIButton] = []
+    var labels: [UILabel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.confimeButton.layer.cornerRadius = 25
+        
+        favoriteTV.delegate = self
+        favoriteTV.dataSource = self
 
         customNavigationBar()
+    }
+    
+    @IBAction func goBackAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func customNavigationBar() {
@@ -30,4 +51,29 @@ class FavoriteLocationViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
+}
+
+extension FavoriteLocationViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as! FavoriteCell
+        
+        print(self.buttons.count)
+        
+        cell.favoriteIconImageButton.setImage(self.buttons[indexPath.row].image(for: .normal), for: .normal)
+        cell.favoriteLocationLabel.text = self.labels[indexPath.row].text
+        
+        if indexPath.row == 0 {
+            cell.favoriteNameLabel.text = "집"
+        } else {
+            cell.favoriteNameLabel.text = ""
+        }
+        
+        return cell
+    }
+    
+    
 }
