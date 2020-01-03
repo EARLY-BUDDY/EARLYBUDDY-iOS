@@ -1170,28 +1170,13 @@
                                         <color key="textColor" red="0.12549019610000001" green="0.57254901960000004" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-J3-1LN">
-                                        <rect key="frame" x="168" y="135" width="90" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="preferTransportAction:" destination="RAN-C2-k26" eventType="touchUpInside" id="def-CW-tsF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-CT-sq2">
-                                        <rect key="frame" x="277" y="135" width="90" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="filteringAction:" destination="RAN-C2-k26" eventType="touchUpInside" id="9Yu-Kx-JX3"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="972-Ep-ahh">
                                         <rect key="frame" x="175" y="135" width="90" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnChoice"/>
                                         <connections>
                                             <action selector="preferAction:" destination="RAN-C2-k26" eventType="touchUpInside" id="HBh-17-JgG"/>
+                                            <segue destination="xVL-Pf-Gte" kind="presentation" identifier="show" id="zg3-oY-xbT"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선호수단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbF-eW-V8s">
@@ -1208,12 +1193,13 @@
                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buc-Jh-qn1">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buc-Jh-qn1" userLabel="Filtering Button">
                                         <rect key="frame" x="277" y="135" width="90" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btnChoice"/>
                                         <connections>
                                             <action selector="sortingAction:" destination="RAN-C2-k26" eventType="touchUpInside" id="MSS-va-DoG"/>
+                                            <segue destination="lui-SB-cWZ" kind="presentation" identifier="sorting" id="hvk-kE-X95"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1423,8 +1409,10 @@
                         <viewLayoutGuide key="safeArea" id="r7E-cA-GtX"/>
                     </view>
                     <connections>
-                        <outlet property="filteringButton" destination="cnq-CT-sq2" id="q9I-rZ-auj"/>
+                        <outlet property="filteringButton" destination="buc-Jh-qn1" id="2WX-EN-beB"/>
+                        <outlet property="filteringLabel" destination="fGt-gz-WNT" id="Yv5-wF-3wl"/>
                         <outlet property="preferButton" destination="972-Ep-ahh" id="hL3-Fs-cbT"/>
+                        <outlet property="preferLabel" destination="mbF-eW-V8s" id="EcR-oP-G5B"/>
                         <outlet property="routeTV" destination="4bj-Pt-74s" id="12V-LB-XXa"/>
                     </connections>
                 </viewController>
@@ -1507,11 +1495,11 @@
             <objects>
                 <viewController storyboardIdentifier="PreferPopUpViewController" id="xVL-Pf-Gte" customClass="PreferPopUpViewController" customModule="EARLY_BUDDY_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UxI-UR-ynm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKC-N8-vIX">
-                                <rect key="frame" x="38" y="210" width="299" height="284"/>
+                                <rect key="frame" x="38" y="180" width="299" height="294"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선호 수단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB3-EL-6LT">
                                         <rect key="frame" x="26" y="21.999999999999996" width="89" height="35.666666666666657"/>
@@ -1520,7 +1508,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwX-ct-20q">
-                                        <rect key="frame" x="25.666666666666657" y="68.666666666666686" width="246.99999999999997" height="0.3333333333333286"/>
+                                        <rect key="frame" x="25.666666666666657" y="68.666666666666657" width="246.99999999999997" height="0.3333333333333286"/>
                                         <color key="backgroundColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="247.33000000000001" id="F7k-DC-Aes"/>
@@ -1628,12 +1616,13 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uKC-N8-vIX" secondAttribute="trailing" constant="38" id="5Fn-5k-KdY"/>
-                            <constraint firstItem="uKC-N8-vIX" firstAttribute="top" secondItem="UxI-UR-ynm" secondAttribute="top" constant="210" id="rZa-yD-fAG"/>
-                            <constraint firstItem="uKC-N8-vIX" firstAttribute="leading" secondItem="UxI-UR-ynm" secondAttribute="leading" constant="38" id="w2E-6Y-rrH"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="uKC-N8-vIX" secondAttribute="bottom" constant="284" id="w4X-4q-41f"/>
+                            <constraint firstItem="uKC-N8-vIX" firstAttribute="top" secondItem="UxI-UR-ynm" secondAttribute="top" constant="180" id="rZa-yD-fAG"/>
+                            <constraint firstItem="uKC-N8-vIX" firstAttribute="leading" secondItem="UgH-se-xns" secondAttribute="leading" constant="38" id="w2E-6Y-rrH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uKC-N8-vIX" secondAttribute="bottom" constant="250" id="w4X-4q-41f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UgH-se-xns"/>
                     </view>
+                    <navigationItem key="navigationItem" id="X8O-HQ-rJ6"/>
                     <connections>
                         <outlet property="allCheckImg" destination="owJ-qG-1P9" id="EBN-c5-1MQ"/>
                         <outlet property="allLabel" destination="sFj-ae-GTl" id="zA1-ba-4zA"/>
@@ -1655,11 +1644,11 @@
             <objects>
                 <viewController storyboardIdentifier="SortingPopUpViewController" id="lui-SB-cWZ" customClass="SortingPopUpViewController" customModule="EARLY_BUDDY_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oOb-KN-gaC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpk-Wk-4G5">
-                                <rect key="frame" x="38" y="210" width="299" height="324"/>
+                                <rect key="frame" x="38" y="165" width="299" height="329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정렬기준" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1C-U2-9Q6">
                                         <rect key="frame" x="26" y="21.999999999999996" width="85" height="35.666666666666657"/>
@@ -1668,7 +1657,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgf-3g-2Ad">
-                                        <rect key="frame" x="25.666666666666657" y="68.666666666666686" width="246.99999999999997" height="0.3333333333333286"/>
+                                        <rect key="frame" x="25.666666666666657" y="68.666666666666657" width="246.99999999999997" height="0.3333333333333286"/>
                                         <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.33000000000000002" id="nKQ-M2-Q1c"/>
@@ -1798,9 +1787,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vpk-Wk-4G5" firstAttribute="top" secondItem="oOb-KN-gaC" secondAttribute="top" constant="210" id="5Ah-hp-qeH"/>
+                            <constraint firstItem="Vpk-Wk-4G5" firstAttribute="top" secondItem="oOb-KN-gaC" secondAttribute="top" constant="165" id="5Ah-hp-qeH"/>
                             <constraint firstItem="ifl-Bm-XmK" firstAttribute="trailing" secondItem="Vpk-Wk-4G5" secondAttribute="trailing" constant="38" id="hFk-90-359"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Vpk-Wk-4G5" secondAttribute="bottom" constant="244" id="oZA-zY-adx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Vpk-Wk-4G5" secondAttribute="bottom" constant="230" id="oZA-zY-adx"/>
                             <constraint firstItem="Vpk-Wk-4G5" firstAttribute="leading" secondItem="ifl-Bm-XmK" secondAttribute="leading" constant="38" id="phS-ug-uvJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ifl-Bm-XmK"/>
@@ -2775,17 +2764,11 @@
                                         <rect key="frame" x="168" y="135" width="90" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="preferTransportAction:" destination="RAN-C2-k26" eventType="touchUpInside" id="puy-1Y-Mrz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwq-nU-xJx">
                                         <rect key="frame" x="277" y="135" width="90" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="filteringAction:" destination="RAN-C2-k26" eventType="touchUpInside" id="dst-Cx-1CG"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVd-F7-tdB">
                                         <rect key="frame" x="175" y="135" width="90" height="23"/>

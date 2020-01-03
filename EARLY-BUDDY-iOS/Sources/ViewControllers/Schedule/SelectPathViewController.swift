@@ -8,11 +8,13 @@
 
 import UIKit
 
-class SelectPathViewController: UIViewController {
+class SelectPathViewController: UIViewController, SendDataDelegate, SortDataDelegate {
 
     @IBOutlet var preferButton: UIButton!
     @IBOutlet var filteringButton: UIButton!
     @IBOutlet var routeTV: UITableView!
+    @IBOutlet var preferLabel: UILabel!
+    @IBOutlet var filteringLabel: UILabel!
     
     var paths: [Path] = []
     
@@ -32,6 +34,9 @@ class SelectPathViewController: UIViewController {
         
         super.viewDidLoad()
         dummyData()
+        
+        self.preferLabel.text = "선호수단"
+        self.filteringLabel.text = "최적 경로순"
 
         self.preferButton.layer.cornerRadius = 13
         self.preferButton.layer.borderWidth = 1
@@ -39,6 +44,9 @@ class SelectPathViewController: UIViewController {
         self.filteringButton.layer.cornerRadius = 13
         self.filteringButton.layer.borderWidth = 1
         self.filteringButton.layer.borderColor = UIColor.lightgray.cgColor
+        
+        self.preferLabel.font = UIFont(name: "NotoSansKR-Medium", size: 12.0)
+        self.filteringLabel.font = UIFont(name: "NotoSansKR-Medium", size: 12.0)
         
         let dummy1 = Route(type: .walk, min: 13)
         let dummy2 = Route(type: .none)
@@ -67,6 +75,16 @@ class SelectPathViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "show" {
+                    let viewController : PreferPopUpViewController = segue.destination as! PreferPopUpViewController
+                        viewController.delegate = self
+        } else if segue.identifier == "sorting" {
+            let viewController: SortingPopUpViewController = segue.destination as! SortingPopUpViewController
+            viewController.delegate = self
+        }
+    }
+    
     @IBAction func preferAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Schedule", bundle: nil)
         let myAlert = storyboard.instantiateViewController(withIdentifier: "PreferPopUpViewController")
@@ -81,6 +99,14 @@ class SelectPathViewController: UIViewController {
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    func sendData(data: String) {
+        preferLabel.text = data
+    }
+    
+    func sortData(data: String) {
+        filteringLabel.text = data
     }
     
     
@@ -112,11 +138,6 @@ class SelectPathViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    @IBAction func preferTransportAction(_ sender: UIButton) {
-    }
-    
-    @IBAction func filteringAction(_ sender: UIButton) {
-    }
     
     @objc func goToDetail() {
         guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "SearchScheduleViewController") as? SearchScheduleViewController else { return }
@@ -126,26 +147,6 @@ class SelectPathViewController: UIViewController {
     }
     
 }
-//
-//extension SelectPathViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        //LineCell
-//        //CIrcleCell
-//        let type = testSet[indexPath.item].type
-//        if testBeforeValue == type {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LineCell", for: indexPath) as! LineCell
-//
-//            return cell
-//        }else {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CircleCell", for: indexPath) as! CircleCell
-//            return cell
-//        }
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return testSet.count * 2 + 1  //2n + 1
-//    }
-//}
 
 extension SelectPathViewController: UITableViewDelegate, UITableViewDataSource {
     

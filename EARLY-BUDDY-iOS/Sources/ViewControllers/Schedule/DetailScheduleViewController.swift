@@ -37,7 +37,14 @@ class DetailScheduleViewController: UIViewController {
         customNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "일정 상세보기"
+    }
+    
     @IBAction func registerButton(_ sender: UIButton) {
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "MainScheduleViewController") as? MainScheduleViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @objc func deleteAction() {

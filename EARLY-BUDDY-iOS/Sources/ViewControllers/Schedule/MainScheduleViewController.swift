@@ -366,6 +366,10 @@ class MainScheduleViewController: UIViewController {
         nextVC.modalPresentationStyle = .fullScreen
         
         myAlert.onFinished = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
+        myAlert.onComplete = { [weak self] in
             self?.navigationController?.pushViewController(nextVC, animated: true)
         }
         

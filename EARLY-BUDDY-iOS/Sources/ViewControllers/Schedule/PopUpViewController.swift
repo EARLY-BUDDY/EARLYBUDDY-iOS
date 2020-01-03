@@ -11,6 +11,7 @@ import UIKit
 class PopUpViewController: UIViewController {
     
     var onFinished: (() -> Void)?
+    var onComplete: (() -> Void)?
     
     @IBOutlet var completeLabel: UILabel!
     @IBOutlet var checkButton: UIButton!
@@ -47,7 +48,7 @@ class PopUpViewController: UIViewController {
         self.confirm = true
         print("goToDetail \(confirm)")
         self.dismiss(animated: true)
-        onFinished?()
+        onComplete?()
     }
     
     
