@@ -29,9 +29,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="backSleep" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-KD-Toh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6z-3O-T8n">
                                 <rect key="frame" x="9" y="44" width="48" height="48"/>
                                 <constraints>
@@ -100,18 +97,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RP7-AX-KFu" secondAttribute="trailing" constant="52" id="1fR-Jc-lqC"/>
                             <constraint firstItem="RP7-AX-KFu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="Gdo-N6-lj9"/>
                             <constraint firstItem="NFn-Mp-VeP" firstAttribute="leading" secondItem="Opo-2F-x5q" secondAttribute="trailing" constant="2" id="LkN-m2-UJK"/>
-                            <constraint firstItem="jhY-KD-Toh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nkv-Ls-TGC"/>
-                            <constraint firstAttribute="bottom" secondItem="jhY-KD-Toh" secondAttribute="bottom" id="Pcs-Nn-rH2"/>
                             <constraint firstItem="v6z-3O-T8n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WyH-RD-RNh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NFn-Mp-VeP" secondAttribute="trailing" constant="10" id="WzD-oQ-Dkh"/>
                             <constraint firstItem="NFn-Mp-VeP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YZd-bj-Fqf"/>
                             <constraint firstItem="vJT-IZ-vux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="aSA-59-wRm"/>
                             <constraint firstItem="vJT-IZ-vux" firstAttribute="top" secondItem="RP7-AX-KFu" secondAttribute="bottom" constant="62" id="bhe-Gz-KVm"/>
                             <constraint firstItem="Opo-2F-x5q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eVf-h9-nNZ"/>
-                            <constraint firstItem="jhY-KD-Toh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fEd-bm-Wc1"/>
                             <constraint firstItem="RP7-AX-KFu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="ie1-3v-NGr"/>
                             <constraint firstItem="v6z-3O-T8n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="obx-us-kia"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jhY-KD-Toh" secondAttribute="trailing" id="ot7-rW-o3N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vJT-IZ-vux" secondAttribute="trailing" constant="87" id="qw2-i2-Epd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -825,7 +818,6 @@
         <image name="back3" width="375" height="812"/>
         <image name="back4" width="375.33334350585938" height="812.33331298828125"/>
         <image name="backAfter" width="375.33334350585938" height="812"/>
-        <image name="backSleep" width="375" height="812.33331298828125"/>
         <image name="calendarIc" width="48" height="48"/>
         <image name="icLocation" width="12.333333015441895" height="15.333333015441895"/>
         <image name="icMy" width="48" height="48"/>
