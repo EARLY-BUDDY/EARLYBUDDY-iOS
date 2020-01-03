@@ -10,17 +10,22 @@ import Foundation
 import Alamofire
 
 struct SearchAddressService {
-    static let searchAddressService = SearchAddressService()
+    static let searched = SearchAddressService()
     
     func searchAddress(_ addr: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        
-        let searchAddrURL = APIConstants.SearchAddressURL + addr
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
         ]
         
+        let searchAddrURL = APIConstants.SearchAddressURL + "addr=" + addr
+        
         Alamofire.request(searchAddrURL, method: .get, parameters: .none, encoding: JSONEncoding.default, headers: header).responseData { response in
+            
+//            print("Request: \(response.request)")
+//            print("Response: \(response.response)")
+//            print("Success: \(response.result.isSuccess)")
+//            print("Response String: \(response.result.value)")
             
             switch response.result {
             case .success:

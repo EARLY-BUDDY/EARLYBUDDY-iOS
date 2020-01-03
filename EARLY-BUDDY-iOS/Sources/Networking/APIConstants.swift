@@ -14,5 +14,5 @@ struct APIConstants {
     // 경로찾기
     static let SearchPathURL = BaseURL + "/searchPath?"
     // 주소검색
-    static let SearchAddressURL = BaseURL + "/searchAddress?addr="
+    static let SearchAddressURL = BaseURL + "/searchAddress?"
 }

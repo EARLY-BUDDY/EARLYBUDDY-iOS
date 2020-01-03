@@ -1,19 +1,19 @@
 {
   "images" : [
     {
+      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "icSchoolSelectedSmall.png",
-      "scale" : "1x"
+      "filename" : "icSchoolSelectedSmall.png"
     },
     {
-      "filename" : "icSchoolSelectedSmall@2x.png",
+      "scale" : "2x",
       "idiom" : "universal",
-      "scale" : "2x"
+      "filename" : "icSchoolSelectedSmall@2x.png"
     },
     {
+      "filename" : "icSchoolSelectedSmall@3x.png",
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "icSchoolSelectedSmall@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {
