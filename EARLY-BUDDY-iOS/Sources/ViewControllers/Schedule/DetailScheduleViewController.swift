@@ -16,23 +16,23 @@ class DetailScheduleViewController: UIViewController {
     @IBOutlet var arriveLocationLabel: UILabel!
     @IBOutlet var amongAlarmLabel: UILabel!
     @IBOutlet var rangeAlarmCount: UILabel!
+    @IBOutlet var layerView: UIView!
+    @IBOutlet var hiddenView: UIView!
     
     
-    var titleText: String = ""
-    var timeText: String = ""
-    var startLocation: String = ""
-    var arriveLocation: String = ""
-    var alarmText: String = ""
-    var rangeAlarmLabel: String = ""
-    var rangeText: [String] = []
+//    var titleText: String = ""
+//    var timeText: String = ""
+//    var startLocation: String = ""
+//    var arriveLocation: String = ""
+//    var alarmText: String = ""
+//    var rangeAlarmLabel: String = ""
+//    var rangeText: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.scheduleTitleLabel.text = titleText
-        self.scheduleTimeLabel.text = timeText
-        self.amongAlarmLabel.text = alarmText
-        self.rangeAlarmCount.text = rangeAlarmLabel
+        layerView.layer.cornerRadius = 10
+        hiddenView.isHidden = true
 
         customNavigationBar()
     }

@@ -20,6 +20,7 @@ class PopUpViewController: UIViewController {
     var timeText: String?
     var alarmText: String?
     var rangeText: String?
+    var confirm = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class PopUpViewController: UIViewController {
     }
     
     @objc func goToHome() {
+        self.confirm = false
         self.dismiss(animated: true)
         onFinished?()
         
@@ -42,9 +44,12 @@ class PopUpViewController: UIViewController {
     // 일정 상세보기로 가는 함수 만들기
     
     @objc func goToDetail() {
+        self.confirm = true
+        print("goToDetail \(confirm)")
         self.dismiss(animated: true)
         onFinished?()
     }
+    
     
     
 }

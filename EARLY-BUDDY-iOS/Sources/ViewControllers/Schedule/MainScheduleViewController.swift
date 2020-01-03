@@ -362,12 +362,11 @@ class MainScheduleViewController: UIViewController {
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
-        myAlert.titleText = titleTextField.text!
-        myAlert.timeText = timeTextField.text!
-        myAlert.alarmText = alarmChangeLabel.text!
-        myAlert.rangeText = rangeChangeLabel.text!
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "DetailScheduleViewController") as? DetailScheduleViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
         
-        myAlert.onFinished = { [weak self] in self?.navigationController?.popViewController(animated: true)
+        myAlert.onFinished = { [weak self] in
+            self?.navigationController?.pushViewController(nextVC, animated: true)
         }
         
         self.present(myAlert, animated: true, completion: nil)
