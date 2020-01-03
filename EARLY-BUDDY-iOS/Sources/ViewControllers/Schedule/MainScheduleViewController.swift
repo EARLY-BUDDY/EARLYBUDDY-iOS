@@ -433,7 +433,7 @@ class MainScheduleViewController: UIViewController {
     }
     
     @objc func goToSearchPath() {
-        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SelectPathViewController") as? SelectPathViewController else { return }
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "ShowPathDetailViewController") as? ShowPathDetailViewController else { return }
         nextVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
