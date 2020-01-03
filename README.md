@@ -261,12 +261,8 @@ class PopUpViewController: UIViewController {
 ✔️  대중적인 이슈지만, 아직 해결법을 찾지 못함
 ------
 ### 얼리버디 iOS 개발자 
-👩🏻‍💻 (리드) [김현지](https://github.com/khyunjiee)</br>
- - SOPT 25기 iOS 파트 YB 김현지입니다 :)</br>
- - 좋은 팀원들 덕분에 행복한 앱잼 중입니다 !!</br>
- 👩🏻‍💻 (서포트) [박경선](https://github.com/gngsn)</br>
- 👩🏻‍💻 [황효진](https://github.com/hwang-hyojin)</br>
- - SOPT 25기 iOS 파트 YB 황효진입니다!</br>
- - 귀여운 이비 보면서 힘내는 중➿🐦
+👩🏻‍💻 (리드) [김현지](https://github.com/khyunjiee)</br
+👩🏻‍💻 [황효진](https://github.com/hwang-hyojin)</br>
+👩🏻‍💻 (서포트) [박경선](https://github.com/gngsn)</br>
 
 
