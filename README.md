@@ -44,6 +44,12 @@
 <img src="./images/s2.png" width="30%" height="30%"></img>
 <img src="./images/s3.png" width="30%" height="30%"></img>
 <img src="./images/s4.png" width="30%" height="30%"></img>
+<img src="./images/1.png" width="30%" height="30%"></img>
+<img src="./images/2.png" width="30%" height="30%"></img>
+<img src="./images/3.png" width="30%" height="30%"></img>
+<img src="./images/4.png" width="30%" height="30%"></img>
+<img src="./images/5.png" width="30%" height="30%"></img>
+<img src="./images/6.png" width="30%" height="30%"></img>
 
 
 🐧 일정등록 🐧
