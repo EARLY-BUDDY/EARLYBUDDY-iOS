@@ -12,7 +12,7 @@ class SearchAddressViewController: UIViewController {
 
     @IBOutlet var startArriveLabel: UILabel!
     @IBOutlet var searchTextField: UITextField!
-    @IBOutlet var searchAddressTV: UITableView!
+//    @IBOutlet var searchAddressTV: UITableView!
     @IBOutlet var searchView: UIView!
     
     let homeImage = UIImage(named: "icHomeSelectedSmall")
@@ -32,8 +32,8 @@ class SearchAddressViewController: UIViewController {
         self.searchView.layer.cornerRadius = 19
         
         searchTextField.delegate = self
-        searchAddressTV.delegate = self
-        searchAddressTV.dataSource = self
+        //        searchAddressTV.delegate = self
+        //        searchAddressTV.dataSource = self
         
         customNavigationBar()
     }

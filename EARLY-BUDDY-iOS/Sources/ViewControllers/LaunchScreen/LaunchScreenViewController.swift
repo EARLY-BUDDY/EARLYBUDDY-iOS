@@ -6,12 +6,12 @@
 //  Copyright © 2020 김현지. All rights reserved.
 //
 
-import UIKit
-import Lottie
-
-class LaunchScreenViewController: UIViewController {
-
-    @IBOutlet var launchView: UIView!
+//import UIKit
+//import Lottie
+//
+//class LaunchScreenViewController: UIViewController {
+//
+//    @IBOutlet var launchView: UIView!
     
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -28,4 +28,4 @@ class LaunchScreenViewController: UIViewController {
 //    }
 //
 
-}
+//}
