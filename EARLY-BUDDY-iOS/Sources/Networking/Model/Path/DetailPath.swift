@@ -9,15 +9,16 @@
 import Foundation
 
 struct DetailPath {
-    
+
     var stations: [String] = []
     var type: Transport
     var startStation: String
-    var startNum: String
+    var startNum: Int
     var arriveStation: String
     var stationNum: Int
     var time: Int
-    
+    var open = false
+
 }
 
 enum Transport {
