@@ -69,9 +69,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         UsersService.usersService.signupNetwork(id, passwd) { data in
             switch data {
             case .success(let data):
-                print(" signupNetwork data : ",data)
+                print(" signupNetwork data : ", data )
                 resultData = data as? SignUpResponse
-                print("resultData : ", resultData)
+                print(" resultData : ", resultData )
                 let myAlert = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCompleteViewController") as! SignUpCompleteViewController
                 myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
                 myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
@@ -93,8 +93,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func goLoginView(){
-        guard let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
-            return }
+        guard let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         loginVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
@@ -120,7 +119,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         registerForKeyboardNotifications()
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -135,7 +133,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
     
     func textFieldCheck(_ tf: UITextField,_ cv: RoundedCornerView,_ errorLabel: UILabel,_ regex: String, _ alert: String) {
         textFieldNullCheck(tf,cv, errorLabel)
@@ -179,8 +176,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
-    
     
     func setUpView(_ view: UIView){
         view.backgroundColor = .white

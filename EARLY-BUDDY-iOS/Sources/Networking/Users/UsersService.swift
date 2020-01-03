@@ -9,7 +9,7 @@ import Alamofire
 
 struct UsersService {
     
-    private let manager = Alamofire.SessionManager.default
+    let manager = Alamofire.SessionManager.default
     
     static let usersService = UsersService()
     
@@ -25,7 +25,7 @@ struct UsersService {
             "userPw": password,
         ]
         
-        Alamofire.request(searchAddrURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header).validate(contentType: ["application/json"]).responseData { response in
+        Alamofire.request(searchAddrURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header).responseData { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {
@@ -78,7 +78,7 @@ struct UsersService {
             "deviceToken": "fyG5BOMVqFM:APA91bGGIEdk21i6sgXWTRNepyf-1f4Znmv1qOMxPwuYLlsz02ux7l7SKMdYjGRYDIRVhdITjDA8ZsjNmWrB-tYwuyA-kNgP6O0SqTwTat0dXR-vygExOfpHaxSg8Xcs3OJS25B8GGXS"
         ]
         
-        manager.request( searchAddrURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header).validate(contentType: ["application/json"]).responseData { response in
+        Alamofire.request( searchAddrURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header).responseData { response in
             print("searchAddrURL : ", searchAddrURL)
             print("parameters : ", parameters)
             print("response : ", response)

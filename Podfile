@@ -11,6 +11,7 @@ target 'EARLY-BUDDY-iOS' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'lottie-ios'
   pod 'SwiftyJSON'
+  pod 'lottie-ios'
   pod 'FSCalendar'
   
 end

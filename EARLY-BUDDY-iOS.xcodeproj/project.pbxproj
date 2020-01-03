@@ -75,6 +75,8 @@
 		52EAC2D823BD079100529CFE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2D723BD079100529CFE /* APIConstants.swift */; };
 		52EAC2DB23BD088900529CFE /* SearchPathResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DA23BD088900529CFE /* SearchPathResponse.swift */; };
 		52EAC2DE23BD0D8200529CFE /* SearchPathService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAC2DD23BD0D8200529CFE /* SearchPathService.swift */; };
+		C51F76C923BFDCB4009C7D15 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51F76C823BFDCB4009C7D15 /* Splash.storyboard */; };
+		C56A61F123BFF07700A1AA82 /* splashJson.json in Resources */ = {isa = PBXBuildFile; fileRef = C56A61F023BFF07700A1AA82 /* splashJson.json */; };
 		52FAC5B723BF1FC600A3FA9B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5B623BF1FC600A3FA9B /* LaunchScreenViewController.swift */; };
 		52FAC5B923BF38DF00A3FA9B /* SearchPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5B823BF38DF00A3FA9B /* SearchPopUpViewController.swift */; };
 		52FAC5BB23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAC5BA23BF3AA100A3FA9B /* SearchLargePopUpViewController.swift */; };
@@ -96,6 +98,7 @@
 		C591EB3E23BF5AA200F953FB /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB3D23BF5AA200F953FB /* UsersService.swift */; };
 		C591EB4123BF5D8A00F953FB /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */; };
 		C591EB4323BF655900F953FB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591EB4223BF655900F953FB /* LoginResponse.swift */; };
+		C5D554D023BFD1A800EE0903 /* LottieSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D554CF23BFD1A800EE0903 /* LottieSplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +178,8 @@
 		63934CFA3C66175262122920 /* Pods-EARLY-BUDDY-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.debug.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EARLY_BUDDY_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E825F62E46BBF2EBF72715 /* Pods-EARLY-BUDDY-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EARLY-BUDDY-iOS.release.xcconfig"; path = "Target Support Files/Pods-EARLY-BUDDY-iOS/Pods-EARLY-BUDDY-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C51F76C823BFDCB4009C7D15 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		C56A61F023BFF07700A1AA82 /* splashJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashJson.json; sourceTree = "<group>"; };
 		C591EB1A23BE0E0400F953FB /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		C591EB1B23BE0E0400F953FB /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		C591EB2323BE0F9500F953FB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +197,7 @@
 		C591EB3D23BF5AA200F953FB /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		C591EB4023BF5D8A00F953FB /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		C591EB4223BF655900F953FB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		C5D554CF23BFD1A800EE0903 /* LottieSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +347,7 @@
 		52CCE39A23AFB61000964D05 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C51F76C523BFDBA9009C7D15 /* Splash */,
 				52CCE3A923B2227C00964D05 /* Fonts */,
 				52CCE38E23AFB5F900964D05 /* Assets.xcassets */,
 				52CCE39C23AFB63400964D05 /* Storyboards */,
@@ -351,6 +358,7 @@
 		52CCE39B23AFB62200964D05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C51F76CA23BFDDFB009C7D15 /* Splash */,
 				5204FCD323BFE0F3006A2299 /* Mypage */,
 				5204FCCA23BFD72C006A2299 /* Calendar */,
 				52FAC5B523BF1FB500A3FA9B /* LaunchScreen */,
@@ -369,6 +377,7 @@
 				52CCE39023AFB5F900964D05 /* LaunchScreen.storyboard */,
 				52CCE38B23AFB5F600964D05 /* Main.storyboard */,
 				524BB5F323B3772B00B82946 /* Schedule.storyboard */,
+				C51F76C823BFDCB4009C7D15 /* Splash.storyboard */,
 				5204FCD123BFE0D8006A2299 /* Mypage.storyboard */,
 			);
 			path = Storyboards;
@@ -478,6 +487,22 @@
 				74549BE4851C921E68FAED54 /* Pods_EARLY_BUDDY_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C51F76C523BFDBA9009C7D15 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		C51F76CA23BFDDFB009C7D15 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C5D554CF23BFD1A800EE0903 /* LottieSplashViewController.swift */,
+				C56A61F023BFF07700A1AA82 /* splashJson.json */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		C591EB2223BE0F8000F953FB /* User */ = {
@@ -605,9 +630,11 @@
 				52CCE3C323B222B600964D05 /* Roboto-Medium.ttf in Resources */,
 				52CCE3C823B222B600964D05 /* Roboto-ThinItalic.ttf in Resources */,
 				52CCE3CA23B222B600964D05 /* Roboto-Bold.ttf in Resources */,
+				C56A61F123BFF07700A1AA82 /* splashJson.json in Resources */,
 				52CCE3C523B222B600964D05 /* Roboto-Regular.ttf in Resources */,
 				52CCE3B423B2229300964D05 /* NotoSansKR-Regular.otf in Resources */,
 				52CCE3B123B2229300964D05 /* NotoSansKR-Bold.otf in Resources */,
+				C51F76C923BFDCB4009C7D15 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +741,7 @@
 				52FAC5BD23BF4FA700A3FA9B /* BusStopView.swift in Sources */,
 				5204FCCC23BFD757006A2299 /* UserSchedule.swift in Sources */,
 				52608B8E23B93A9F0086AC3E /* WalkCell.swift in Sources */,
+				C5D554D023BFD1A800EE0903 /* LottieSplashViewController.swift in Sources */,
 				52AD2F4123BE7A8F00706B0B /* FavoriteLocationViewController.swift in Sources */,
 				5204FCD523BFE0FF006A2299 /* MypageViewController.swift in Sources */,
 				524BB5FC23B3BDA600B82946 /* Kerning.swift in Sources */,

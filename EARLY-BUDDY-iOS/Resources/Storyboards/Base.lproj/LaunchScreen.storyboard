@@ -19,6 +19,7 @@
                     </view>
                     <connections>
                         <outlet property="launchView" destination="Ze5-6b-2t3" id="ReA-lK-egi"/>
+                        <outlet property="mainView" destination="Ze5-6b-2t3" id="lwc-bd-4UM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

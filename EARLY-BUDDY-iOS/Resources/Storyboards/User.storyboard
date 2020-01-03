@@ -818,7 +818,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jlP-E7-oOJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="P7U-h6-nCe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UserNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="P7U-h6-nCe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="roQ-50-8T4">
