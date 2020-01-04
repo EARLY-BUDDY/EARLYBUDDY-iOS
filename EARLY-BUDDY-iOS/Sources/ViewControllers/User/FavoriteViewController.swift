@@ -87,13 +87,14 @@ class FavoriteViewController: UIViewController {
                 thirdLocationLabel.textColor = .lightGray
             }
         }
-        
-        registerButton.isEnabled = true
-        registerButton.backgroundColor = .mainblue
+                     
+        registerButton.isEnabled = false
+        registerButton.backgroundColor = .lightGray
+
         for name in names {
-            if name == "btnLocationPlus" {
-                registerButton.isEnabled = false
-                registerButton.backgroundColor = .lightGray
+            if name != "btnLocationPlus" {
+                registerButton.isEnabled = true
+                registerButton.backgroundColor = .mainblue
             }
         }
     }
