@@ -63,7 +63,7 @@ extension SearchFavoriteViewController {
         SearchAddressService.shared.searchAddress(address) { data in
             switch data {
             case .success(let data):
-                let addressResult = data as? [SearchAddressResponse]
+                var addressResult = data as? [SearchAddressResponse]
                 self.results = addressResult ?? []
                 self.searchAddressTV.reloadData()
             case .requestErr:
@@ -80,20 +80,46 @@ extension SearchFavoriteViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        for var result in results {
+            if result.placeName == nil {
+                result.placeName = result.addressName
+            }
+            if result.roadAddressName == nil {
+                result.roadAddressName = result.addressName
+            }
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
-    
-        cell.placeName.text = gsno(results[indexPath.row].placeName)
-        cell.addressName.text = gsno(results[indexPath.row].addressName)
-        cell.roadAddressName.text = gsno(results[indexPath.row].roadAddressName)
+        
+        if results[indexPath.row].placeName == nil {
+            cell.placeName.text = results[indexPath.row].addressName
+        } else {
+            cell.placeName.text = results[indexPath.row].placeName
+        }
+        
+        if results[indexPath.row].roadAddressName == nil {
+            cell.roadAddressName.text = results[indexPath.row].addressName
+        } else {
+            cell.roadAddressName.text = results[indexPath.row].roadAddressName
+        }
+        cell.addressName.text = results[indexPath.row].addressName
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.view.endEditing(true)
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
         print(cell.placeName?.text)
         searchTextField.text = cell.placeName?.text
-        searchTextField.text = cell.addressName?.text
+        
+        let defaults = UserDefaults.standard
+        var names = defaults.stringArray(forKey: "favoriteNames") ?? [String]()
+        
+        names[selectedIdx ?? 0] = (startArriveLabel.text ?? "") + (results[indexPath.row].addressName ?? "")
+        
+        defaults.set(names, forKey: "favoriteNames")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
