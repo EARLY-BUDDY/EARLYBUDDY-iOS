@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 struct SearchAddressResponse: Codable {
-    let placeName: String?
-    let addressName: String?
-    let roadAddressName: String?
+    var placeName: String?
+    var addressName: String?
+    var roadAddressName: String?
     let x: String?
     let y: String?
     
