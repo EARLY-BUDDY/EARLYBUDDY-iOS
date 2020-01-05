@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 struct SearchPathService {
-    static let searchPathService = SearchPathService()
+    static let shared = SearchPathService()
     
     func searchPath(_ ex: Double, _ ey: Double, _ sx: Double, _ sy: Double, _ type: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         
@@ -32,11 +32,9 @@ struct SearchPathService {
                                 let decoder = JSONDecoder()
                                 print("value", value)
                                 let result = try decoder.decode(SearchPathResponse.self, from: value)
-                                
                                 // ResponseString에 있는 success로 분기 처리
                                 // ResponseString에 있는 이름이 success
                                 switch result.success {
-                                    
                                 case true:
                                     print("success")
                                     completion(.success(result.data!))

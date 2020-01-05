@@ -10,13 +10,33 @@ import UIKit
 
 class SearchScheduleViewController: UIViewController {
     
+    @IBOutlet var goStartButton: UIButton!
+    @IBOutlet var goArriveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         customNavigationBar()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "장소 선택"
+    }
+    
+    @IBAction func goStartSearch(_ sender: UIButton) {
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SearchAddressViewController") as? SearchAddressViewController else { return }
+        nextVC.startArrive = "출발 : "
+        nextVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func goArriveSearch(_ sender: UIButton) {
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SearchAddressViewController") as? SearchAddressViewController else { return }
+        nextVC.startArrive = "도착 : "
+        nextVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     func customNavigationBar() {
         self.view.layer.backgroundColor = UIColor.white.cgColor
         self.navigationController?.setNavigationBarHidden(false, animated: true)

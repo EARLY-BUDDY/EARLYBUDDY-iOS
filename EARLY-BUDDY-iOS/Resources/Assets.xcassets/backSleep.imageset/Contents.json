@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "backSleep.png",
+      "idiom" : "universal",
       "scale" : "1x",
-      "idiom" : "universal"
+      "filename" : "backSleep.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "backSleep@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "backSleep@2x.png"
     },
     {
       "filename" : "backSleep@3x.png",

@@ -361,9 +361,18 @@ class MainScheduleViewController: UIViewController {
         let myAlert = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(identifier: "DetailScheduleViewController") as? DetailScheduleViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        
         myAlert.onFinished = { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
+        
+        myAlert.onComplete = { [weak self] in
+            self?.navigationController?.pushViewController(nextVC, animated: true)
+        }
+        
         self.present(myAlert, animated: true, completion: nil)
     }
     
@@ -418,7 +427,7 @@ class MainScheduleViewController: UIViewController {
     }
     
     @objc func goToSearch() {
-        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SelectPathViewController") as? SelectPathViewController else { return }
+        guard let nextVC = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "SearchAddressViewController") as? SearchAddressViewController else { return }
         nextVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -433,6 +442,7 @@ class MainScheduleViewController: UIViewController {
 }
 
 extension MainScheduleViewController: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == titleTextField {
             self.titleLineView.backgroundColor = UIColor.mainblue
@@ -445,6 +455,7 @@ extension MainScheduleViewController: UITextFieldDelegate {
             self.timeLineView.heightAnchor.constraint(equalToConstant: 2).isActive = true
         }
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == titleTextField {
             self.titleLineView.backgroundColor = UIColor.darkgray

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(data: String)
+}
+
 class PreferPopUpViewController: UIViewController {
 
     @IBOutlet var popUpView: UIView!
@@ -19,6 +23,8 @@ class PreferPopUpViewController: UIViewController {
     @IBOutlet var subwayLabel: UIButton!
     @IBOutlet var subwayCheckImg: UIImageView!
     @IBOutlet var confirmButton: UIButton!
+    
+    var delegate: SendDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +69,22 @@ class PreferPopUpViewController: UIViewController {
     
     
     @IBAction func confirmAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        if !allCheckImg.isHidden {
+            if let data = allLabel.titleLabel?.text {
+                delegate?.sendData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        } else if !busCheckImg.isHidden {
+            if let data = busLabel.titleLabel?.text {
+                delegate?.sendData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        } else {
+            if let data = subwayLabel.titleLabel?.text {
+                delegate?.sendData(data: data)
+                dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
 }

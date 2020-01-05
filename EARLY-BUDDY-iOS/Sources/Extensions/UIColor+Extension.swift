@@ -159,6 +159,11 @@ extension UIColor {
         return UIColor(red: 253.0 / 255.0, green: 190.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
     }
     
+    @nonobjc class var ff6E6E: UIColor {
+        return UIColor(red: 1.0, green: 110.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
+    }
+    
+    
     @nonobjc class var gwangjuOne: UIColor {
         return UIColor(red: 44.0 / 255.0, green: 184.0 / 255.0, blue: 61.0 / 255.0, alpha: 1.0)
     }
