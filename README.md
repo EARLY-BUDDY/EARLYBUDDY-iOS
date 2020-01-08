@@ -43,19 +43,21 @@
 <img src="./images/home6.png" width="30%" height="30%"></img>
 <img src="./images/home7.png" width="30%" height="30%"></img>
 <img src="./images/home8.png" width="30%" height="30%"></img>
+
+🐧 일정등록 🐧
+
 <img src="./images/s1.png" width="30%" height="30%"></img>
 <img src="./images/s2.png" width="30%" height="30%"></img>
 <img src="./images/s3.png" width="30%" height="30%"></img>
 <img src="./images/s4.png" width="30%" height="30%"></img>
+
+🐧 로그인 🐧
 <img src="./images/1.png" width="30%" height="30%"></img>
 <img src="./images/2.png" width="30%" height="30%"></img>
 <img src="./images/3.png" width="30%" height="30%"></img>
 <img src="./images/4.png" width="30%" height="30%"></img>
 <img src="./images/5.png" width="30%" height="30%"></img>
 <img src="./images/6.png" width="30%" height="30%"></img>
-
-
-🐧 일정등록 🐧
 
 ------
 
@@ -257,8 +259,8 @@ class PopUpViewController: UIViewController {
 ```
 
 🆘 통신 시 접근시간 초과의 이슈가 있었음
-
 ✔️  대중적인 이슈지만, 아직 해결법을 찾지 못함
+
 ------
 ### 얼리버디 iOS 개발자 
 👩🏻‍💻 (리드) [김현지](https://github.com/khyunjiee)</br>
