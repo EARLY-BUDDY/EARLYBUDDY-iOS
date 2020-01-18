@@ -263,7 +263,7 @@ class PopUpViewController: UIViewController {
 
 ------
 ### 얼리버디 iOS 개발자 
-👩🏻‍💻 (리드) [김현지](https://github.com/khyunjiee)</br>
+👩🏻‍💻 리드 - [김현지](https://github.com/khyunjiee)</br>
 👩🏻‍💻 [황효진](https://github.com/hwang-hyojin)</br>
 👩🏻‍💻 (서포트) [박경선](https://github.com/gngsn)</br>
 
